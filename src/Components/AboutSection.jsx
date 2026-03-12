@@ -9,7 +9,7 @@ import Paragraph from "./Paragraph";
 function AboutSection(){
     const navigate=useNavigate();
     return(
-        <section className="flex justify-between items-center gap-12 px-12 py-16 bg-gray-100 w-screen">
+        <section className="flex justify-between items-center gap-12 px-12 py-16 bg-blue-50 w-screen">
 
             
             <div className="grid grid-cols-2 gap-4 w-1/2">

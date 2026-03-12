@@ -3,6 +3,7 @@ import React from "react";
 import semera from "../assets/semera.jpg";
 import dessie from "../assets/dessie.jpg";
 import Heading from "./Heading";
+import Paragraph from "./Paragraph";
 
 function Campus() {
   const campuses = [
@@ -14,10 +15,8 @@ function Campus() {
     <section className="px-6 md:px-12 py-16 bg-gray-50">
      
       <Heading title="Our Campuses"/>
-      <p className="text-gray-600 text-center mb-12 max-w-3xl mx-auto">
-        Explore our modern campus facilities designed to provide a comfortable
-        and inspiring learning environment for our students. Currently, we have campuses in Semera and Dessie.
-      </p>
+      <Paragraph children="Explore our modern campus facilities designed to provide a comfortable
+        and inspiring learning environment for our students. Currently, we have campuses in Semera and Dessie."className="text-center mx-50"/>
 
      
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

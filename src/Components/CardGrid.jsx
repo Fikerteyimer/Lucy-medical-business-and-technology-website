@@ -12,6 +12,7 @@ function CardGrid({ title, items }) {
             title={item.school}
             description={item.description}
             image={item.image} 
+            
             link={item.link}
           />
         ))}

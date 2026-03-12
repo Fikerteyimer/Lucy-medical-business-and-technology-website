@@ -20,7 +20,7 @@ function HomePage(){
           <AboutSection/>
           <CardGrid title="Top Course Categories" items={categories} />
           <Counter/>
-          <div className="bg-gray-50 py-15">
+          <div className="bg-blue-50 py-15">
           <CardGrid title="Our Popular Courses" items={courses.slice(1,4)}/>
           </div>
           <Campus/>
