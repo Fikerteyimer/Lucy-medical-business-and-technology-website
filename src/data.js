@@ -71,4 +71,31 @@ export const courses = [
            link:"/courses"
            },
           ];
+
+export const navLinks = [
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+    { name: "Courses", path: "/courses" },
+    { name: "Admission", path: "/admission" },
+    { name: "News and Events", path: "/news" },
+    { name: "Campus Life", path: "/campus" }
+  ];
+
+export const categories = [
+        {
+            school: "Medical",
+            description: "Explore programs in medicine, nursing, and healthcare sciences, preparing future professionals for a healthier world.",
+            link:"/courses"
+        },
+        {
+            school: "Business",
+            description: "Learn management, finance, and entrepreneurship skills to lead in the corporate and startup world.",
+            link:"/courses"
+        },
+        {
+            school: "Technology",
+            description: "Build practical coding, software, and development skills to create innovative apps, websites, and solutions for the modern world.",
+            link:"/courses"
+        }
+    ];
     

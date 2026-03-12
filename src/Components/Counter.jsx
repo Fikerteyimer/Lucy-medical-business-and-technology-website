@@ -42,11 +42,11 @@ function Counter() {
   }, []);
 
   return (
-    <div className="my-30 bg-blue-900 py-10 mx-10 px-10 text-center transform transition duration-300 hover:scale-120">
-      <div className="flex w-full justify-around items-center">
+    <div className="my-30 bg-blue-900  py-10 mx-10 px-10 text-center transform transition duration-300 hover:scale-120">
+      <div className="flex w-full justify-around items-center ">
         {properties.map((property, index) => {
           return (
-            <div key={index}>
+            <div key={index} >
               <h3 className="text-4xl text-white mb-5">
                 {counts[index]}{property.plus}
               </h3>

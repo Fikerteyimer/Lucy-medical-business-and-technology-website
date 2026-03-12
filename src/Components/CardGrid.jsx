@@ -1,9 +1,10 @@
 import Card from "./Card"; 
+import Heading from "./Heading";
 
 function CardGrid({ title, items }) {
   return (
     <div>
-      <h1 className="font-bold text-blue-900 text-3xl my-7 py-5 text-center">{title}</h1>
+      <Heading title={title}/>
       <div className="grid gap-6 md:grid-cols-3 px-30">
         {items.map((item, index) => (
           <Card
