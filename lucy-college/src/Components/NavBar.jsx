@@ -1,16 +1,11 @@
 import logo from '../assets/logo.jpg';
 import { NavLink } from "react-router-dom";
 import Button from './Button';
+import { navLinks } from "../data";
+
 
 const NavBar = () => {
-  const navLinks = [
-    { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
-    { name: "Courses", path: "/courses" },
-    { name: "Admission", path: "/admission" },
-    { name: "News and Events", path: "/news" },
-    { name: "Campus Life", path: "/campus" }
-  ];
+  
 
   return (
     <nav className='p-4 fixed w-full top-0 left-0 bg-white z-10 flex justify-between items-center h-18 shadow-xl'>

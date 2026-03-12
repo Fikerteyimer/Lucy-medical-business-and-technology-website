@@ -1,9 +1,7 @@
 function Heading({title}){
     return(
         <>
-        <h1 className="font-bold text-blue-500 text-3xl">
-                {title}
-         </h1>
+        <h1 className="font-bold text-blue-900 text-4xl my-7 py-5 text-center">{title}</h1>
         </>
     );
 
