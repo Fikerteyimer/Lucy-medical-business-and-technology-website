@@ -5,7 +5,13 @@ import laboratory from "./assets/laboratory.jpg";
 import management from "./assets/management.jpg";
 import resource from "./assets/resource.jpg";
 import development from "./assets/development.jpg";
+import med from './assets/med.jpg';
+import bus from './assets/bus.jpg';
+import tech from './assets/tech.jpg';
+import Category from "./Components/Category";
+
 export const courses = [
+
               {
                id: 1,
                image: nursing,
@@ -13,7 +19,8 @@ export const courses = [
                description: "Professional nursing education with strong clinical practice.",
                levels: ["Degree"],
                modes: ["regular"],
-               link:"/courses"
+               link:"/courses",
+               category:"medical"
                },
                {
                id: 2,
@@ -22,7 +29,8 @@ export const courses = [
                description: "Study pharmaceutical sciences and patient care.",
                levels: ["Degree"],
                modes: ["regular"],
-               link:"/courses"
+               link:"/courses",
+               category:"medical"
               },
   
               {
@@ -32,7 +40,8 @@ export const courses = [
               description: "Financial management and accounting principles.",
               levels: ["Degree", "Diploma"],
               modes: ["regular", "night"],
-              link:"/courses"
+              link:"/courses",
+              category:"business"
              },
              {
              id: 4,
@@ -41,7 +50,8 @@ export const courses = [
              description: "Laboratory diagnostics and medical testing.",
              levels: ["Degree", "Diploma"],
              modes: ["regular"],
-             link:"/courses"
+             link:"/courses",
+             category:"medical"
              },
              {
              id: 5,
@@ -50,7 +60,8 @@ export const courses = [
              description: "Leadership and organizational management skills.",
              levels: ["Degree"],
              modes: ["regular"],
-             link:"/courses"
+             link:"/courses",
+             category:"business"
             },
             {
             id: 6,
@@ -59,7 +70,8 @@ export const courses = [
             description: "People management and organizational development.",
             levels: ["Diploma"],
             modes: ["regular", "night"],
-            link:"/courses"
+            link:"/courses",
+            category:"business"
             },
             {
            id: 7,
@@ -68,7 +80,8 @@ export const courses = [
            description: "Modern web technologies and database systems.",
            levels: ["Diploma"],
            modes: ["regular", "night"],
-           link:"/courses"
+           link:"/courses",
+           category:"tech"
            },
           ];
 
@@ -85,17 +98,20 @@ export const categories = [
         {
             school: "Medical",
             description: "Explore programs in medicine, nursing, and healthcare sciences, preparing future professionals for a healthier world.",
-            link:"/courses"
+            image:med
+            
         },
         {
             school: "Business",
             description: "Learn management, finance, and entrepreneurship skills to lead in the corporate and startup world.",
-            link:"/courses"
+          
+            image:bus
         },
         {
             school: "Technology",
             description: "Build practical coding, software, and development skills to create innovative apps, websites, and solutions for the modern world.",
-            link:"/courses"
+          
+            image:tech
         }
     ];
     

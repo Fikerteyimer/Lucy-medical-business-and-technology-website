@@ -12,7 +12,6 @@ function Programs(){
             <NavBar/>
             <ProgramsHero/>
             <ProgramsCard/>
-            
             <NewLetter/>
             <Footer/>
         </div>

@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 
 function Counter() {
-
   const properties = [
     {
       num: 2,
@@ -10,18 +9,18 @@ function Counter() {
     {
       num: 500,
       behavior: "Students",
-      plus: "+"
+      plus: "+",
     },
     {
       num: 50,
       behavior: "Faculty Members",
-      plus: "+"
+      plus: "+",
     },
     {
-      num:7,
-      behavior:"Courses",
-      plus:"+"
-    }
+      num: 7,
+      behavior: "Courses",
+      plus: "+",
+    },
   ];
 
   const [counts, setCounts] = useState(properties.map(() => 0));
@@ -42,20 +41,32 @@ function Counter() {
   }, []);
 
   return (
-    <div className="my-30 bg-blue-900  py-10 mx-10 px-10 text-center transform transition duration-300 hover:scale-120">
-      <div className="flex w-full justify-around items-center ">
-        {properties.map((property, index) => {
-          return (
-            <div key={index} >
-              <h3 className="text-4xl text-white mb-5">
-                {counts[index]}{property.plus}
+    <section className="my-32 px-12">
+      <div className="bg-gradient-to-r from-blue-800 to-blue-600 rounded-3xl shadow-2xl py-16 px-10 hover:scale-107 transition duration-300">
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 text-center">
+
+          {properties.map((property, index) => (
+            <div
+              key={index}
+              className="bg-white/10 backdrop-blur-md rounded-2xl p-8 
+              hover:scale-110 transition duration-300 shadow-lg"
+            >
+              <h3 className="text-5xl font-bold text-white mb-3">
+                {counts[index]}
+                {property.plus}
               </h3>
-              <p className="text-xl text-white">{property.behavior}</p>
+
+              <p className="text-lg text-blue-100 font-medium tracking-wide">
+                {property.behavior}
+              </p>
             </div>
-          );
-        })}
+          ))}
+
+        </div>
+
       </div>
-    </div>
+    </section>
   );
 }
 

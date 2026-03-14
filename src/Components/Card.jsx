@@ -3,7 +3,7 @@ import Paragraph from "./Paragraph";
 
 function Card({ title, description, image, link }) {
   return (
-    <div className="flex flex-col h-full shadow-xl bg-white p-8 rounded-lg hover:shadow-2xl transition-transform duration-300 hover:scale-105">
+    <div className="flex flex-col h-full shadow-xl bg-white p-8 rounded-lg hover:shadow-xl transition-transform duration-300 hover:scale-105">
       
       
       <div className="mb-4">
@@ -16,10 +16,12 @@ function Card({ title, description, image, link }) {
           />
         )}
         <Paragraph>{description}</Paragraph>
+       
       </div>
 
-      
+
       <div className="mt-auto">
+        {link&&
         <Link
           to={link}
           className="inline-flex items-center text-blue-500 group font-medium"
@@ -28,7 +30,8 @@ function Card({ title, description, image, link }) {
           <span className="ml-1 transition-transform duration-300 group-hover:translate-x-1">
             →
           </span>
-        </Link>
+        </Link>}
+        
       </div>
     </div>
   );
