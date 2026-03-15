@@ -10,6 +10,14 @@ import bus from './assets/bus.jpg';
 import tech from './assets/tech.jpg';
 import Category from "./Components/Category";
 
+
+import thinking from "./assets/thinking.png";
+import academic from "./assets/academic.png";
+import collaboration from "./assets/collaboration.png";
+import inclusivity from "./assets/inclusivity.png";
+import honesty from "./assets/honesty.png";
+import expertise from "./assets/expertise.png";
+
 export const courses = [
 
               {
@@ -114,4 +122,11 @@ export const categories = [
             image:tech
         }
     ];
-    
+export const values=[
+            { img: academic, title: "Academics", desc: "Strong theory with real-world practical learning." },
+            { img: thinking, title: "Critical Thinking", desc: "We shape innovative and ethical professionals." },
+            { img: collaboration, title: "Collaboration", desc: "Teamwork builds great ideas and strong careers." },
+            { img: inclusivity, title: "Inclusivity", desc: "Equal opportunity and respect for all." },
+            { img: honesty, title: "Honesty", desc: "Integrity, transparency, and accountability." },
+            { img: expertise, title: "Expertise", desc: "Industry-aligned learning with professionals." },
+          ]   
