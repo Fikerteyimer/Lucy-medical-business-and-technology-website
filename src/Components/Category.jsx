@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { categories } from "../data";
 import Button from "./Button";
 import CardGrid from "./CardGrid";
-function Category(){
+function Category({title,items,button}){
     const navigate=useNavigate();
     return(
         <div>

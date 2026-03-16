@@ -40,11 +40,7 @@ const NavBar = () => {
             </li>
           ))}
 
-          <li>
-            <NavLink to="/contact">
-              <Button text="Contact Us" />
-            </NavLink>
-          </li>
+          
 
           <li>
             <NavLink to="/login">

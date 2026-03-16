@@ -1,4 +1,3 @@
-// Campus.jsx
 import React from "react";
 import semera from "../assets/semera.jpg";
 import dessie from "../assets/dessie.jpg";
@@ -15,8 +14,10 @@ function Campus() {
     <section className="px-6 md:px-12 py-16 ">
      
       <Heading title="Our Campuses"/>
-      <Paragraph children="Explore our modern campus facilities designed to provide a comfortable
-        and inspiring learning environment for our students. Currently, we have campuses in Semera and Dessie."className="text-center mx-50"/>
+      <Paragraph 
+        children="Explore our modern campus facilities designed to provide a comfortable
+                  and inspiring learning environment for our students. Currently, we have campuses in Semera and Dessie."
+        className="text-left md:text-center max-w-3xl mx-auto"/>
 
      
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

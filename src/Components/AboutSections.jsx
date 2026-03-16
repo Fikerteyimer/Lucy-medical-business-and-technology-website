@@ -23,7 +23,7 @@ function AboutSections(){
                         and play an important role in the advancement of education and society."/>
                         
         </div>
-        <img src={SIDE} className="object-cover h-auto rounded-2xl"/>
+        <img src={SIDE} className="object-cover h-auto rounded"/>
         </div>
     );
 

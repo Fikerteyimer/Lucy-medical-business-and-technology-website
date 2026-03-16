@@ -51,7 +51,7 @@ export const courses = [
               link:"/courses",
               category:"business"
              },
-             {
+{
              id: 4,
              image: laboratory,
              school: "Medical Laboratory Science",
@@ -99,7 +99,8 @@ export const navLinks = [
     { name: "Courses", path: "/courses" },
     { name: "Admission", path: "/admission" },
     { name: "News and Events", path: "/news" },
-    { name: "Campus Life", path: "/campus" }
+    { name: "Campus Life", path: "/campus" },
+    { name: "Contact Us", path: "/contact" }
   ];
 
 export const categories = [
