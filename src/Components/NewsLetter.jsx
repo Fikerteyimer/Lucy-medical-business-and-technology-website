@@ -4,11 +4,11 @@ function NewLetter() {
   return (
     <section className="mt-32 px-6">
       
-      <div className="max-w-7xl mx-auto bg-gradient-to-r from-blue-900 to-blue-800 
+      <div className="max-w-7xl mx-auto bg-linear-to-r from-blue-900 to-blue-800 
       rounded-3xl shadow-2xl px-12 py-20 flex flex-col md:flex-row 
       items-center justify-between gap-10">
 
-        {/* Left text */}
+        
         <div className="max-w-lg space-y-4 text-center md:text-left">
           <h1 className="text-4xl font-extrabold text-white leading-tight">
             Subscribe to our Newsletter

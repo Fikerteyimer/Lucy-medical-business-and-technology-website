@@ -6,32 +6,24 @@ import Counter from '../Components/Counter';
 import NewLetter from "../Components/NewsLetter";
 import Footer from "../Components/Footer";
 import Campus from "../Components/Campus";
-import Category from "../Components/Category";
-
+import CardGrid from "../Components/CardGrid";
 import { categories, courses } from "../data";
 import Button from "../Components/Button";
 
 function HomePage() {
     const navigate = useNavigate(); 
-
     return (
         <div>
           <NavBar /> 
           <Hero />
           <AboutSection />
-          <Category
+          <CardGrid
             title="Top Course Categories"
             items={categories}
-            button={
-              <Button
-                text="View All"
-                className="py-3 px-20"
-                onClick={() => navigate("/courses")}
-              />
-            }
+            className="w-20 h-20 mx-auto"
           />
           <Counter />
-          <Category
+          <CardGrid
             title="Our Popular Courses"
             items={courses.slice(1,4)}
             button={

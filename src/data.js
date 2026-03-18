@@ -5,9 +5,9 @@ import laboratory from "./assets/laboratory.jpg";
 import management from "./assets/management.jpg";
 import resource from "./assets/resource.jpg";
 import development from "./assets/development.jpg";
-import med from './assets/med.jpg';
-import bus from './assets/bus.jpg';
-import tech from './assets/tech.jpg';
+import medical from './assets/medical.png';
+import financial from './assets/financial.png';
+import pc from './assets/pc.png';
 import Category from "./Components/Category";
 
 
@@ -106,21 +106,21 @@ export const navLinks = [
 export const categories = [
         {
             school: "Medical",
-            description: "Explore programs in medicine, nursing, and healthcare sciences, preparing future professionals for a healthier world.",
-            image:med
+            description: "Explore programs in nursing, and healthcare sciences, preparing future professionals for a healthier world.",
+            image:medical
             
         },
         {
             school: "Business",
             description: "Learn management, finance, and entrepreneurship skills to lead in the corporate and startup world.",
           
-            image:bus
+            image:financial
         },
         {
             school: "Technology",
             description: "Build practical coding, software, and development skills to create innovative apps, websites, and solutions for the modern world.",
           
-            image:tech
+            image:pc
         }
     ];
 export const values=[

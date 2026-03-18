@@ -13,7 +13,7 @@ const NavBar = () => {
 
       <div className="flex justify-between items-center px-6 py-3">
 
-        {/* Logo */}
+       
         <div className="flex items-center gap-3">
           <img src={logo} alt="Lucy College Logo" className="w-14 h-14 object-cover" />
 
@@ -22,7 +22,7 @@ const NavBar = () => {
           </h1>
         </div>
 
-        {/* Desktop Menu */}
+       
         <ul className="hidden md:flex items-center gap-8">
 
           {navLinks.map((nav, index) => (
@@ -81,10 +81,6 @@ const NavBar = () => {
                 </NavLink>
               </li>
             ))}
-
-            <NavLink to="/contact" onClick={() => setMenuOpen(false)}>
-              <Button text="Contact Us" />
-            </NavLink>
 
             <NavLink to="/login" onClick={() => setMenuOpen(false)}>
               <Button text="Portal Login" />

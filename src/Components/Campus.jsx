@@ -1,6 +1,6 @@
 import React from "react";
 import semera from "../assets/semera.jpg";
-import dessie from "../assets/dessie.jpg";
+import dessie from "../assets/Dessie.jpg";
 import Heading from "./Heading";
 import Paragraph from "./Paragraph";
 

@@ -1,26 +1,12 @@
 import { useState, useEffect } from "react";
+import Heading from "./Heading";
 
 function Counter() {
   const properties = [
-    {
-      num: 2,
-      behavior: "Campuses",
-    },
-    {
-      num: 500,
-      behavior: "Students",
-      plus: "+",
-    },
-    {
-      num: 50,
-      behavior: "Faculty Members",
-      plus: "+",
-    },
-    {
-      num: 7,
-      behavior: "Courses",
-      plus: "+",
-    },
+    { num: 2, behavior: "Campuses" },
+    { num: 500, behavior: "Students", plus: "+" },
+    { num: 50, behavior: "Faculty Members", plus: "+" },
+    { num: 7, behavior: "Courses", plus: "+" },
   ];
 
   const [counts, setCounts] = useState(properties.map(() => 0));
@@ -28,12 +14,9 @@ function Counter() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCounts((prevCounts) =>
-        prevCounts.map((count, index) => {
-          if (count < properties[index].num) {
-            return count + 1;
-          }
-          return count;
-        })
+        prevCounts.map((count, index) =>
+          count < properties[index].num ? count + 1 : count
+        )
       );
     }, 20);
 
@@ -41,30 +24,26 @@ function Counter() {
   }, []);
 
   return (
-    <section className="my-32 px-12">
-      <div className="bg-gradient-to-r from-blue-800 to-blue-600 rounded-3xl shadow-2xl py-16 px-10 hover:scale-107 transition duration-300">
+    <section className="py-20 px-4 md:px-16 bg-gray-100 mt-30">
+      <div className="max-w-7xl mx-auto">
+        <Heading title=" Our Achievements"/>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 text-center">
-
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           {properties.map((property, index) => (
             <div
               key={index}
-              className="bg-white/10 backdrop-blur-md rounded-2xl p-8 
-              hover:scale-110 transition duration-300 shadow-lg"
+              className="bg-gradient-to-br from-blue-600 to-blue-400 rounded-3xl shadow-lg p-8 flex flex-col items-center justify-center transform transition duration-300 hover:scale-105"
             >
-              <h3 className="text-5xl font-bold text-white mb-3">
+              <h3 className="text-4xl md:text-5xl font-extrabold text-white mb-2">
                 {counts[index]}
-                {property.plus}
+                {property.plus || ""}
               </h3>
-
-              <p className="text-lg text-blue-100 font-medium tracking-wide">
+              <p className="text-white/90 text-lg md:text-xl font-medium text-center">
                 {property.behavior}
               </p>
             </div>
           ))}
-
         </div>
-
       </div>
     </section>
   );
