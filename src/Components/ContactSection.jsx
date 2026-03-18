@@ -1,53 +1,58 @@
-import Heading from "./Heading";
+import { FiPhone, FiMail, FiClock } from "react-icons/fi";
 import Paragraph from "./Paragraph";
+import Subheading from "./Subheading";
+import ContactCard from "./ContactCard";
 
 function ContactSection() {
-  const contacts = [
-    {
-      location: "Dessie Campus",
-      city: "Dessie, Ethiopia",
-      phone_num: ["0902552255", "0902552200", "0333112525", "0333116669"],
-      email: "lucy@gmail.com",
+  const contacts = {
+    phones: [
+      { label: "Dessie Campus", numbers: ["0902552255", "0902552200", "0333112525", "0333116669"] },
+      { label: "Semera Campus", numbers: ["0902557755", "0902552255"] },
+    ],
+    emails: ["lucy@gmail.com"],
+    officeHours: {
+      days: "Monday – Friday",
+      time: "8:30 AM – 5:30 PM",
     },
-    {
-      location: "Semera Campus",
-      city: "Semera, Afar Region",
-      phone_num: ["0902557755", "0902552255"],
-      email: "lucy@gmail.com",
-    },
-  ];
+  };
 
   return (
-    <div className="bg-blue-950 p-5 rounded-2xl shadow-md space-y-6 m-20">
-      <Heading title="Contact Information" />
-
-      <Paragraph className="text-white">
-        Reach out to us for questions about admissions, programs, or general information.
+    <section className="max-w-6xl mx-auto px-6 py-12">
+      <Subheading text="Get Connected"/>
+      <Paragraph className="text-center">
+        We're here to help! Reach out for admissions, programs, or general inquiries.
       </Paragraph>
-        <div className=" grid md:grid-cols-2 gap-6">
-      {contacts.map((campus, index) => (
- 
-        <div key={index} className="space-y-2 text-white bg-blue-900 rounded-lg p-8">
-          <h3 className="font-semibold text-lg ">{campus.location}</h3>
-          <p>📍 {campus.city}</p>
-          
-          {campus.phone_num.map((phone, idx) => (
-            <p key={idx}>
-              📞 <a href={`tel:+251${phone}`} className="hover:underline">{phone}</a>
-            </p>
-          ))}
 
-          {campus.email && <p>✉ <a href={`mailto:${campus.email}`} className="hover:underline">{campus.email}</a></p>}
-        </div>
-       
-      ))}
-    </div>
-      <div className="text-white bg-blue-900 rounded-lg p-8">
-        <h3 className="font-semibold text-lg" >Office Hours</h3>
-        <p>Monday – Friday</p>
-        <p>8:30 AM – 5:30 PM</p>
+      <div className="grid md:grid-cols-3 gap-6">
+        <ContactCard icon={FiClock} title="Office Hours">
+          <Paragraph>{contacts.officeHours.days}</Paragraph>
+          <Paragraph>{contacts.officeHours.time}</Paragraph>
+        </ContactCard>
+
+        <ContactCard icon={FiMail} title="Email">
+          {contacts.emails.map((email, idx) => (
+            <a key={idx} href={`mailto:${email}`} className="text-gray-700 hover:text-blue-600 hover:underline block">
+              {email}
+            </a>
+          ))}
+        </ContactCard>
+
+        <ContactCard icon={FiPhone} title="Call Us">
+          {contacts.phones.map((campus, idx) => (
+            <div key={idx} className="mb-3">
+              <p className="font-semibold text-gray-800">{campus.label}</p>
+              <div className="flex flex-wrap justify-center gap-2 mt-1">
+                {campus.numbers.map((num, id) => (
+                  <a key={id} href={`tel:+251${num}`} className="bg-red-100 text-red-700 rounded-full px-3 py-1 text-sm hover:bg-red-200 transition">
+                    {num}
+                  </a>
+                ))}
+              </div>
+            </div>
+          ))}
+        </ContactCard>
       </div>
-    </div>
+    </section>
   );
 }
 

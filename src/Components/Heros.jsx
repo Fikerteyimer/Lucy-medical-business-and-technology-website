@@ -10,9 +10,9 @@ function Heros({title,children,Image}){
                   backgroundPosition: "center",
                 }}
               >
-                <div className="absolute inset-0 bg-blue-900/60">
-                <Heading title={title} className="text-5xl text-white"/>
-                <Paragraph children={children} className="text-2xl text-center text-white"/>
+                <div className="absolute inset-0 bg-gray-100/60">
+                <Heading title={title} className="text-5xl text-blue-900"/>
+                <Paragraph children={children} className=" text-center text-blue-900"/>
                 </div>
                 
 

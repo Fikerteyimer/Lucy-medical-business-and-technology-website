@@ -2,7 +2,6 @@ import AboutSections from "../Components/AboutSections";
 import CardGrid from "../Components/CardGrid";
 import Footer from "../Components/Footer";
 import Heros from "../Components/Heros";
-import Mentors from "../Components/Mentors";
 import Mission from "../Components/Mission";
 import NavBar from "../Components/NavBar";
 import NewLetter from "../Components/NewsLetter";
@@ -19,7 +18,7 @@ function AboutPage(){
             <NavBar/>
             <Heros title="About Us" children="Explore a lot about lucy" Image={AboutUs}/>
             <AboutSections/>
-            <Mentors/>
+          
             <MissionVision
                title="Our Vision"
                text="Becoming a premier higher education

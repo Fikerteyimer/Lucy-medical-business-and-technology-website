@@ -1,6 +1,7 @@
 import Button from "./Button";
 import Heading from "./Heading";
 import Paragraph from "./Paragraph";
+import Subheading from "./Subheading";
 
 const contactFields = [
   { placeholder: "First name", name: "first-name", type: "text", id: "first-name" },
@@ -12,44 +13,81 @@ const contactFields = [
 
 function ContactInfo() {
   return (
-    <div className="bg-white shadow-lg rounded-2xl p-8 w-1/2  m-20">
+    <section className="max-w-4xl mx-auto px-6 py-12">
+      <div className="bg-white shadow-lg rounded-2xl p-8 md:p-12">
+        <Subheading text="Get in Touch" className="md:text-left" />
+        <Paragraph className="text-gray-600 mt-2 mb-6 text-center md:text-left ">
+          Do you have a question, complaint, or need help? Feel free to contact us.
+        </Paragraph>
 
-      <Heading title="Get in touch  " />
+        <form className="space-y-6">
 
-      <Paragraph className="text-gray-600 mt-2 mb-6">
-        Do you have a question, complaint, or need help?
-        Feel free to contact us.
-      </Paragraph>
+          {/* Name fields */}
+          <div className="grid md:grid-cols-2 gap-4">
+            {contactFields.slice(0, 2).map((field) => (
+              <input
+                key={field.id}
+                type={field.type}
+                name={field.name}
+                id={field.id}
+                placeholder={field.placeholder}
+                className="w-full p-3 border border-gray-200 rounded-xl bg-gray-50
+                focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-300
+                transition placeholder-gray-400"
+              />
+            ))}
+          </div>
 
-      <form className="space-y-5">
+          {/* Email & Phone */}
+          <div className="grid md:grid-cols-2 gap-4">
+            {contactFields.slice(2, 4).map((field) => (
+              <input
+                key={field.id}
+                type={field.type}
+                name={field.name}
+                id={field.id}
+                placeholder={field.placeholder}
+                className="w-full p-3 border border-gray-200 rounded-xl bg-gray-50
+                focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-300
+                transition placeholder-gray-400"
+              />
+            ))}
+          </div>
 
-        <div className="grid md:grid-cols-2 gap-4">
-          {contactFields.map((field) => (
-            <input
-              key={field.id}
-              type={field.type}
-              name={field.name}
-              id={field.id}
-              placeholder={field.placeholder}
-              className="w-full p-3 border border-gray-200 rounded-lg bg-blue-50 
-              focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+          {/* Subject */}
+          <input
+            type="text"
+            name="subject"
+            id="subject"
+            placeholder="Subject"
+            className="w-full p-3 border border-gray-200 rounded-xl bg-gray-50
+            focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-300
+            transition placeholder-gray-400"
+          />
+
+          {/* Message */}
+          <textarea
+            name="message"
+            id="message"
+            rows="5"
+            placeholder="Write your message..."
+            className="w-full p-3 border border-gray-200 rounded-xl bg-gray-50
+            focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-300
+            transition placeholder-gray-400 resize-none"
+          ></textarea>
+
+          {/* Submit Button */}
+          <div className="text-center">
+            <Button
+              text="Send Message"
+              className="px-8 py-3 rounded-xl bg-blue-600 text-white font-semibold
+              hover:bg-blue-700 transition shadow-md hover:shadow-lg"
             />
-          ))}
-        </div>
+          </div>
 
-        <textarea
-          name="message"
-          id="message"
-          rows="5"
-          placeholder="Write your message..."
-          className="w-full p-3 border border-gray-200 rounded-lg bg-blue-50 
-          focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
-        ></textarea>
-
-        <Button text="Send Message" className="px-8 py-3" />
-
-      </form>
-    </div>
+        </form>
+      </div>
+    </section>
   );
 }
 
