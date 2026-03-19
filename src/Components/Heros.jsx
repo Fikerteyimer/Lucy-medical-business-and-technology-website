@@ -3,7 +3,7 @@ import Paragraph from "./Paragraph";
 function Heros({title,children,Image}){
     return(
          <div
-                className="relative h-60 w-screen  mt-20  flex items-center justify-center "
+                className="relative h-80 w-screen  mt-20  flex items-center justify-center "
                  style={{
                   backgroundImage: `url(${Image})`,
                   backgroundSize: "cover",

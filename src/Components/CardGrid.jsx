@@ -15,6 +15,7 @@ function CardGrid({ title, items,button,className}) {
             image={item.image} 
             link={item.link}
             className={className}
+            
            
           />
         ))}

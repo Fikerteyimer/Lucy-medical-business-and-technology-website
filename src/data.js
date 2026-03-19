@@ -17,7 +17,6 @@ import collaboration from "./assets/collaboration.png";
 import inclusivity from "./assets/inclusivity.png";
 import honesty from "./assets/honesty.png";
 import expertise from "./assets/expertise.png";
-
 export const courses = [
 
               {
@@ -27,7 +26,7 @@ export const courses = [
                description: "Professional nursing education with strong clinical practice.",
                levels: ["Degree"],
                modes: ["regular"],
-               link:"/courses",
+               link:"/courses/nursing",
                category:"medical"
                },
                {
@@ -37,7 +36,7 @@ export const courses = [
                description: "Study pharmaceutical sciences and patient care.",
                levels: ["Degree"],
                modes: ["regular"],
-               link:"/courses",
+               link:"/courses/pharmacy",
                category:"medical"
               },
   
@@ -48,7 +47,7 @@ export const courses = [
               description: "Financial management and accounting principles.",
               levels: ["Degree", "Diploma"],
               modes: ["regular", "night"],
-              link:"/courses",
+              link:"/courses/accounting",
               category:"business"
              },
 {
@@ -58,7 +57,7 @@ export const courses = [
              description: "Laboratory diagnostics and medical testing.",
              levels: ["Degree", "Diploma"],
              modes: ["regular"],
-             link:"/courses",
+             link:"/courses/laboratory",
              category:"medical"
              },
              {
@@ -68,7 +67,7 @@ export const courses = [
              description: "Leadership and organizational management skills.",
              levels: ["Degree"],
              modes: ["regular"],
-             link:"/courses",
+             link:"/courses/management",
              category:"business"
             },
             {
@@ -78,7 +77,7 @@ export const courses = [
             description: "People management and organizational development.",
             levels: ["Diploma"],
             modes: ["regular", "night"],
-            link:"/courses",
+            link:"/courses/resource",
             category:"business"
             },
             {
@@ -88,7 +87,7 @@ export const courses = [
            description: "Modern web technologies and database systems.",
            levels: ["Diploma"],
            modes: ["regular", "night"],
-           link:"/courses",
+           link:"/courses/web development",
            category:"tech"
            },
           ];

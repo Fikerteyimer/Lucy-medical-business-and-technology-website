@@ -8,7 +8,6 @@ function ProgramsCard() {
 
   const [selectedCredential, setSelectedCredential] = useState("All");
   const [selectedSpecification, setSelectedSpecification] = useState("All");
-
   const filteredCourses = courses.filter((course) => {
     const credentialMatch =
       selectedCredential === "All" || course.levels.includes(selectedCredential);
@@ -18,7 +17,7 @@ function ProgramsCard() {
   });
 
   return (
-    <div className="px-4 md:px-12 py-8">
+    <div className="px-2 md:px-7 py-8">
       
       <div className="flex flex-col md:flex-row justify-center items-center gap-6 mb-8">
         <select
@@ -48,18 +47,13 @@ function ProgramsCard() {
 
     
       <CardGrid
-        title="Find a Course That Suits You"
         items={filteredCourses.map((course) => ({
           image: course.image,
+          school:course.school,
           description:course.description,
-          actions: [{ to: course.link, label: "Learn More" }],
-          content: (
-            <>
-              <h2 className="text-xl font-semibold mb-2">{course.school}</h2>
-              <p className="text-gray-700">{course.description}</p>
-            </>
-          ),
+          link:course.link 
         }))}
+        className="w-full m-0"
       />
     </div>
   );

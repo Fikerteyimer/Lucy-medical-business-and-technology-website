@@ -3,9 +3,9 @@ import { twMerge } from "tailwind-merge";
 import clsx from "clsx";
 import Paragraph from "./Paragraph";
 
-function Card({ title, description, image, link,className }) {
+function Card({ title, description, image, link,className}) {
   return (
-    <div className="flex flex-col  h-full shadow-xl bg-white p-5 md:p-8 rounded-lg hover:shadow-xl transition-transform duration-300 hover:scale-105 overflow-hidden">
+    <div className="flex flex-col  h-full shadow-xl bg-white p-5 md:p-8 rounded-lg hover:shadow-md transition-transform duration-300 hover:scale-105 ">
       <div className="mb-4">
         {image && (
           <img
@@ -15,7 +15,6 @@ function Card({ title, description, image, link,className }) {
           />
         )}
         <h2 className="text-xl font-semibold mb-2 text-blue-700 text-center" >{title}</h2>
-        
         <Paragraph>{description}</Paragraph>
       </div>
 
