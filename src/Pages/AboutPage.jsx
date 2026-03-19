@@ -16,7 +16,7 @@ function AboutPage(){
     return(
         <div>
             <NavBar/>
-            <Heros title="About Us" children="Explore a lot about lucy" Image={AboutUs}/>
+            
             <AboutSections/>
           
             <MissionVision

@@ -5,13 +5,13 @@ import Paragraph from "./Paragraph";
 
 function Card({ title, description, image, link,className}) {
   return (
-    <div className="flex flex-col  h-full shadow-xl bg-white p-5 md:p-8 rounded-lg hover:shadow-md transition-transform duration-300 hover:scale-105 ">
+    <div className="flex flex-col shadow-md bg-white p-5 md:p-7 rounded-lg hover:shadow-md transition-transform duration-300 hover:scale-105 ">
       <div className="mb-4">
         {image && (
           <img
             src={image}
             alt={title}
-            className={twMerge(clsx("w-full h-32 object-cover mb-2 rounded",className)) }
+            className={twMerge(clsx("w-full h-35 object-cover mb-2 rounded",className)) }
           />
         )}
         <h2 className="text-xl font-semibold mb-2 text-blue-700 text-center" >{title}</h2>

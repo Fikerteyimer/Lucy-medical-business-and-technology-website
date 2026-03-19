@@ -11,11 +11,7 @@ function Programs(){
     return(
         <div>
             <NavBar/>
-            <Heros 
-               title="Our Programs"
-               children="Explore Our Programs in Medical,business and technology fields."
-               Image={courses}
-            />
+            
             <ProgramsCard/>
             <NewLetter/>
             <Footer/>
