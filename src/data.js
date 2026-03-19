@@ -18,79 +18,147 @@ import inclusivity from "./assets/inclusivity.png";
 import honesty from "./assets/honesty.png";
 import expertise from "./assets/expertise.png";
 export const courses = [
+  {
+    id: 1,
+    image: nursing,
+    school: "Nursing",
+    description: "Professional nursing education with strong clinical practice.",
+    fullDescription:
+      "The Nursing program is designed to prepare compassionate and skilled healthcare professionals who can deliver high-quality patient care. The program combines theoretical knowledge with extensive clinical practice in hospitals and healthcare centers.",
+    duration: "4 Years",
+    levels: ["Degree"],
+    modes: ["regular"],
+    category: "medical",
+    skills: [
+      "Patient care",
+      "Medical ethics",
+      "Clinical procedures",
+      "Emergency response",
+      "Health assessment"
+    ],
+    
+  },
 
-              {
-               id: 1,
-               image: nursing,
-               school: "Nursing",
-               description: "Professional nursing education with strong clinical practice.",
-               levels: ["Degree"],
-               modes: ["regular"],
-               link:"/courses/nursing",
-               category:"medical"
-               },
-               {
-               id: 2,
-               image: pharmacy,
-               school: "Pharmacy",
-               description: "Study pharmaceutical sciences and patient care.",
-               levels: ["Degree"],
-               modes: ["regular"],
-               link:"/courses/pharmacy",
-               category:"medical"
-              },
-  
-              {
-              id: 3,
-              image: accounting,
-              school: "Accounting and Finance",
-              description: "Financial management and accounting principles.",
-              levels: ["Degree", "Diploma"],
-              modes: ["regular", "night"],
-              link:"/courses/accounting",
-              category:"business"
-             },
-{
-             id: 4,
-             image: laboratory,
-             school: "Medical Laboratory Science",
-             description: "Laboratory diagnostics and medical testing.",
-             levels: ["Degree", "Diploma"],
-             modes: ["regular"],
-             link:"/courses/laboratory",
-             category:"medical"
-             },
-             {
-             id: 5,
-             image: management,
-             school: "Management",
-             description: "Leadership and organizational management skills.",
-             levels: ["Degree"],
-             modes: ["regular"],
-             link:"/courses/management",
-             category:"business"
-            },
-            {
-            id: 6,
-            image: resource,
-            school: "Human Resource Management",
-            description: "People management and organizational development.",
-            levels: ["Diploma"],
-            modes: ["regular", "night"],
-            link:"/courses/resource",
-            category:"business"
-            },
-            {
-           id: 7,
-           image: development,
-           school: "Web Development & Database Administration",
-           description: "Modern web technologies and database systems.",
-           levels: ["Diploma"],
-           modes: ["regular", "night"],
-           link:"/courses/web development",
-           category:"tech"
-           },
-          ];
+  {
+    id: 2,
+    image: pharmacy,
+    school: "Pharmacy",
+    description: "Study pharmaceutical sciences and patient care.",
+    fullDescription:
+      "The Pharmacy program focuses on the study of medicines, drug development, and their safe use. Students learn how to prepare, dispense, and manage medications while ensuring patient safety and effective treatment outcomes.",
+    duration: "4 Years",
+    levels: ["Degree"],
+    modes: ["regular"],
+    category: "medical",
+    skills: [
+      "Pharmacology",
+      "Drug interaction",
+      "Prescription handling",
+      "Patient counseling",
+      "Medication safety"
+    ]
+  },
+
+  {
+    id: 3,
+    image: accounting,
+    school: "Accounting and Finance",
+    description: "Financial management and accounting principles.",
+    fullDescription:
+      "This program provides students with strong foundations in financial accounting, management accounting, and financial analysis. It prepares graduates for careers in finance, auditing, banking, and business management.",
+    duration: "3–4 Years",
+    levels: ["Degree", "Diploma"],
+    modes: ["regular", "night"],
+    category: "business",
+    skills: [
+      "Financial reporting",
+      "Budgeting",
+      "Auditing",
+      "Taxation",
+      "Financial analysis"
+    ]
+  },
+
+  {
+    id: 4,
+    image: laboratory,
+    school: "Medical Laboratory Science",
+    description: "Laboratory diagnostics and medical testing.",
+    fullDescription:
+      "The Medical Laboratory Science program trains students to perform laboratory tests used in diagnosing diseases. Students gain practical skills in handling medical equipment, analyzing samples, and ensuring accurate test results.",
+    duration: "4 Years",
+    levels: ["Degree", "Diploma"],
+    modes: ["regular"],
+    category: "medical",
+    skills: [
+      "Lab testing",
+      "Sample analysis",
+      "Diagnostics",
+      "Microscopy",
+      "Medical equipment handling"
+    ]
+  },
+
+  {
+    id: 5,
+    image: management,
+    school: "Management",
+    description: "Leadership and organizational management skills.",
+    fullDescription:
+      "The Management program focuses on developing leadership, strategic thinking, and organizational skills. It prepares students to manage teams, plan business strategies, and make effective decisions in organizations.",
+    duration: "3–4 Years",
+    levels: ["Degree"],
+    modes: ["regular"],
+    category: "business",
+    skills: [
+      "Leadership",
+      "Strategic planning",
+      "Decision making",
+      "Team management",
+      "Business communication"
+    ]
+  },
+
+  {
+    id: 6,
+    image: resource,
+    school: "Human Resource Management",
+    description: "People management and organizational development.",
+    fullDescription:
+      "Human Resource Management focuses on recruiting, training, and managing employees in organizations. Students learn how to handle workplace relationships, employee performance, and organizational policies.",
+    duration: "2–3 Years",
+    levels: ["Diploma"],
+    modes: ["regular", "night"],
+    category: "business",
+    skills: [
+      "Recruitment",
+      "Employee relations",
+      "Performance management",
+      "HR policies",
+      "Conflict resolution"
+    ]
+  },
+
+  {
+    id: 7,
+    image: development,
+    school: "Web Development & Database Administration",
+    description: "Modern web technologies and database systems.",
+    fullDescription:
+      "This program equips students with skills in building modern websites and managing databases. Students learn frontend and backend development, database design, and how to create scalable web applications.",
+    duration: "2–3 Years",
+    levels: ["Diploma"],
+    modes: ["regular", "night"],
+    category: "tech",
+    skills: [
+      "HTML, CSS, JavaScript",
+      "React / Frontend frameworks",
+      "Backend development",
+      "Database management",
+      "API development"
+    ]
+  }
+];
 
 export const navLinks = [
     { name: "Home", path: "/" },

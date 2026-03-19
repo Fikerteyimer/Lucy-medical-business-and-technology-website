@@ -3,7 +3,7 @@ import CardGrid from "./CardGrid";
 import { courses } from "../data";
 
 function ProgramsCard() {
-  const Credentials = ["All", "Degree", "Diploma", "Masters", "PhD"];
+  const Credentials = ["All", "Degree", "Diploma"];
   const Specifications = ["All", "regular", "night"];
 
   const [selectedCredential, setSelectedCredential] = useState("All");
@@ -74,15 +74,18 @@ function ProgramsCard() {
       </div>
 
     
-      <div className="bg-white rounded-2xl shadow-lg  md:p-6">
+      <div className=" rounded-2xl   md:p-6">
         <CardGrid
           items={filteredCourses.map((course) => ({
             image: course.image,
             school: course.school,
             description: course.description,
             link: course.link,
+            id:course.id
           }))}
           className="w-full"
+          text="View Detail"
+          arrow="→"
         />
       </div>
     </div>

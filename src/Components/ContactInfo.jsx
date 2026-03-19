@@ -13,8 +13,8 @@ const contactFields = [
 
 function ContactInfo() {
   return (
-    <section className="max-w-4xl mx-auto px-6 py-12">
-      <div className="bg-white shadow-lg rounded-2xl p-8 md:p-12">
+    <section className="max-w-4xl mx-auto px-6 py-12 ">
+      <div className="bg-white shadow-lg rounded-2xl p-8 md:p-12 border border-blue-100">
         <Subheading text="Get in Touch" className="md:text-left" />
         <Paragraph className="text-gray-600 mt-2 mb-6 text-center md:text-left ">
           Do you have a question, complaint, or need help? Feel free to contact us.
@@ -22,7 +22,7 @@ function ContactInfo() {
 
         <form className="space-y-6">
 
-          {/* Name fields */}
+        
           <div className="grid md:grid-cols-2 gap-4">
             {contactFields.slice(0, 2).map((field) => (
               <input
@@ -38,7 +38,7 @@ function ContactInfo() {
             ))}
           </div>
 
-          {/* Email & Phone */}
+      
           <div className="grid md:grid-cols-2 gap-4">
             {contactFields.slice(2, 4).map((field) => (
               <input
@@ -54,7 +54,7 @@ function ContactInfo() {
             ))}
           </div>
 
-          {/* Subject */}
+       
           <input
             type="text"
             name="subject"
@@ -65,7 +65,7 @@ function ContactInfo() {
             transition placeholder-gray-400"
           />
 
-          {/* Message */}
+         
           <textarea
             name="message"
             id="message"
@@ -76,7 +76,6 @@ function ContactInfo() {
             transition placeholder-gray-400 resize-none"
           ></textarea>
 
-          {/* Submit Button */}
           <div className="text-center">
             <Button
               text="Send Message"

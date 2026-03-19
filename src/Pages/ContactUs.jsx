@@ -13,8 +13,6 @@ function ContactUs(){
             <ContactHero/>
              <ContactInfo />
             <ContactSection />
-           
-     
             <NewLetter/>
             <Footer/>
         </div>
