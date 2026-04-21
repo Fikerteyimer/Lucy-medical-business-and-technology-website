@@ -1,5 +1,22 @@
 @import "tailwindcss";
 /* index.css */
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
+html,body{
+    overflow-x: hidden;
+   
+}z
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+This s
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

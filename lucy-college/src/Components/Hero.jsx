@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <>
       <div
-        className="relative h-screen w-screen  mt-10  flex items-center justify-center "
+        className="relative min-h-screen w-full  mt-10  flex items-center justify-center "
         style={{
           backgroundImage: `url(${background})`,
           backgroundSize: "cover",
@@ -25,7 +25,7 @@ const Hero = () => {
             where curiosity, creativity, and excellence come together to build your future.
           </p>
           <Link to="/courses">
-            <Button text="Explore Programs" className="py-3  px-10 bg-[#07b0df] hover:bg-blue-900 rounded-full my-10"/>
+            <Button text="Explore Programs" className="py-3  px-10 bg-[#07b0df]   my-10"/>
           </Link>
         </div>
       </div>

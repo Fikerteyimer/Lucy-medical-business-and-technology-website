@@ -11,6 +11,7 @@ import NewsAndEvents from './Pages/NewsAndEvents'
 import CampusLife from './Pages/CampusLife'
 import ContactUs from './Pages/ContactUs'
 import Login from './Pages/Login'
+import CourseDetails from './Components/CourseDetails'
 
 
 
@@ -23,6 +24,7 @@ function App() {
       <Route index  element={<HomePage/>}></Route>
       <Route path ="/about" element={<AboutPage/>}></Route>
       <Route path ="/courses" element={<Programs/>}></Route>
+      <Route path="/courses/:school" element={<CourseDetails />} />
       <Route path ="/admission" element={<Admission/>}></Route>
       <Route path ="/news" element={<NewsAndEvents/>}></Route>
       <Route path ="/campus" element={<CampusLife/>}></Route>
