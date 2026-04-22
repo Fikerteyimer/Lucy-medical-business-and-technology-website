@@ -2,6 +2,7 @@ import Image1 from "../assets/Image1.jpg";
 import Image2 from "../assets/Image2.jpg";
 import Image3 from "../assets/Image3.jpg";
 import Heading from "./Heading";
+import Paragraph from "./Paragraph";
 
 function CampusLife() {
   const campusImages = [ Image1, Image3,Image1,Image2,Image3,Image1,Image2,Image2,Image3];
@@ -10,11 +11,12 @@ function CampusLife() {
     <section className="py-20 px-6 md:px-20 bg-white">
       
       <Heading title="Campus Life"/>
+      <Paragraph
+        className="text-left md:text-center max-w-4xl mx-auto"
+        children="Experience a vibrant campus environment that supports learning,
+        collaboration, and student growth." />
 
-      <p className="text-center text-gray-600 max-w-2xl mx-auto mb-12">
-        Experience a vibrant campus environment that supports learning,
-        collaboration, and student growth.
-      </p>
+      
 
      
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
