@@ -9,6 +9,9 @@ import medical from './assets/medical.png';
 import financial from './assets/financial.png';
 import pc from './assets/pc.png';
 import Category from "./Components/Category";
+import { HiAcademicCap, HiBeaker, HiBookOpen, HiOfficeBuilding } from "react-icons/hi";
+import { MdModelTraining } from "react-icons/md";
+import { FaChalkboardTeacher } from "react-icons/fa";
 
 
 import thinking from "./assets/thinking.png";
@@ -197,4 +200,36 @@ export const values=[
             { img: inclusivity, title: "Inclusivity", desc: "Equal opportunity and respect for all." },
             { img: honesty, title: "Honesty", desc: "Integrity, transparency, and accountability." },
             { img: expertise, title: "Expertise", desc: "Industry-aligned learning with professionals." },
-          ]   
+          ]  
+export const features = [
+  {
+    icon: "building",
+    school: "Modern Classrooms",
+    description: "State-of-the-art classrooms equipped with modern teaching tools for interactive learning",
+  },
+  {
+    icon: "lab",
+    school: "Laboratories",
+    description: "Well-equipped medical, computer, and science labs for practical and hands-on training",
+  },
+  {
+    icon: "library",
+    school: "Libraries",
+    description: "Extensive library resources",
+  },
+  {
+    icon: "training",
+    school: "Practical Training Centers",
+    description: "Dedicated centers",
+  },
+  {
+    icon: "teacher",
+    school: "Experienced Instructors",
+    description: "Qualified faculty",
+  },
+  {
+    icon: "cap",
+    school: "Industry Partnerships",
+    description: "Collaborations",
+  },
+];
