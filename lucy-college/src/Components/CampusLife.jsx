@@ -5,7 +5,7 @@ import Heading from "./Heading";
 import Paragraph from "./Paragraph";
 
 function CampusLife() {
-  const campusImages = [ Image1, Image3,Image1,Image2,Image3,Image1,Image2,Image2];
+  const campusImages = [ Image1, Image3,Image1,Image2,Image3,Image1,Image2,Image2,Image3];
 
   return (
     <section className="py-20 px-6 md:px-20 bg-white">
@@ -15,7 +15,7 @@ function CampusLife() {
         children="Experience a vibrant campus environment that supports learning,
         collaboration, and student growth." />
 
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {campusImages.map((img, index) => (
           <div
             key={index}
@@ -24,7 +24,7 @@ function CampusLife() {
             <img
               src={img}
               alt={`Campus life ${index + 1}`}
-              className="w-full h-64 object-cover hover:scale-105 transition duration-300"
+              className="w-full h-70 object-cover hover:scale-105 transition duration-300"
             />
           </div>
         ))}
