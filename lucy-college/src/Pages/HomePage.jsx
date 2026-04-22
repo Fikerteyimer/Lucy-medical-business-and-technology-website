@@ -11,6 +11,7 @@ import { categories, courses } from "../data";
 import Button from "../Components/Button";
 import WhyLucy from "../Components/WhyLucy";
 import CampusLife from "../Components/CampusLife";
+import LatestNews from "../Components/LatestNews";
 
 function HomePage() {
     const navigate = useNavigate(); 
@@ -28,6 +29,8 @@ function HomePage() {
           />
           <WhyLucy/>
           <Counter />
+          <LatestNews/>
+          
           <CardGrid
             title="Our Popular Courses"
             items={courses.slice(1,4)}
