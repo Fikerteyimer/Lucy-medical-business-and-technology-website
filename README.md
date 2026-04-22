@@ -1,16 +1,31 @@
-# React + Vite
+# 🎓 Lucy Medical, Business and Technology College Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive university/college website built with **React** and **Tailwind CSS**.  
+This project showcases academic programs, campus life, facilities, and institutional values in a clean and user-friendly design.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+- 🏫 Modern campus showcase (Semera & Dessie campuses)
+- 📚 Courses section (Medical, Business, Technology)
+- 🧪 Facilities and learning environment highlights
+- 🎯 Why Choose Lucy College section
+- 📰 Latest news and updates section
+- 🧑‍🎓 Student-centered UI design
+- 📱 Fully responsive (mobile, tablet, desktop)
+- 🎨 Modern UI with Tailwind CSS
+- 🖼 Image gallery with hover effects
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠 Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- ⚛️ React.js
+- 🎨 Tailwind CSS
+- 📦 React Icons
+- 📁 Vite (optional depending on setup)
+
+---
+
+## 📂 Project Structure
