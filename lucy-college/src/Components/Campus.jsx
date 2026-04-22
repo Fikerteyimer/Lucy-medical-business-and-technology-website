@@ -16,10 +16,7 @@ function Campus() {
       <Heading title="Our Campuses"/>
       <Paragraph 
         children="Explore our modern campus facilities designed to provide a comfortable
-                  and inspiring learning environment for our students. Currently, we have campuses in Semera and Dessie."
-        className="text-left md:text-center max-w-3xl mx-auto"/>
-
-     
+                  and inspiring learning environment for our students. Currently, we have campuses in Semera and Dessie."/>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {campuses.map((campus, index) => (
           <div

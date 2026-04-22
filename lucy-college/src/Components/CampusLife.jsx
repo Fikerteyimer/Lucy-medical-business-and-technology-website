@@ -12,7 +12,6 @@ function CampusLife() {
       
       <Heading title="Campus Life"/>
       <Paragraph
-        className="text-left md:text-center max-w-4xl mx-auto"
         children="Experience a vibrant campus environment that supports learning,
         collaboration, and student growth." />
 

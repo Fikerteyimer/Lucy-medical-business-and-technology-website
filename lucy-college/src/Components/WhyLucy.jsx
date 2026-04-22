@@ -20,7 +20,7 @@ function WhyLucy() {
     <section className="py-20  px-6 md:px-20">
       <Heading title="Why You Choose Lucy College?" />
 
-      <Paragraph className="text-left md:text-center max-w-4xl mx-auto">
+      <Paragraph>
         Lucy Medical, Business and Technology College offers a unique blend of
         practical training, academic excellence, and student-centered learning
         to prepare graduates for successful careers and societal contribution.
