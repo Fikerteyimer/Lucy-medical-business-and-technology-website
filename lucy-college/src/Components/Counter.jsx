@@ -24,7 +24,7 @@ function Counter() {
   }, []);
 
   return (
-    <section className="py-20 px-4 md:px-16 bg-gray-100 mt-30">
+    <section className="py-20 px-4 md:px-16 bg-blue-50 mt-30">
       <div className="max-w-7xl mx-auto">
         <Heading title=" Our Achievements"/>
 

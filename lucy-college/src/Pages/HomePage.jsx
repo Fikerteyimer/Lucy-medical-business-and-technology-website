@@ -19,12 +19,13 @@ function HomePage() {
           <Hero />
           
           <AboutSection />
-           <WhyLucy/>
+           
           <CardGrid
             title="Top Course Categories"
             items={categories}
             className="w-20 h-20 mx-auto"
           />
+          <WhyLucy/>
           <Counter />
           <CardGrid
             title="Our Popular Courses"
