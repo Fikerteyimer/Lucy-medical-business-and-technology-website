@@ -17,7 +17,9 @@ function HomePage() {
         <div>
           <NavBar /> 
           <Hero />
+          
           <AboutSection />
+           <WhyLucy/>
           <CardGrid
             title="Top Course Categories"
             items={categories}
@@ -35,7 +37,7 @@ function HomePage() {
               />
             }
           />
-          <WhyLucy/>
+         
           <Campus />
           <NewLetter />
           <Footer /> 
