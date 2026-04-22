@@ -10,6 +10,7 @@ import CardGrid from "../Components/CardGrid";
 import { categories, courses } from "../data";
 import Button from "../Components/Button";
 import WhyLucy from "../Components/WhyLucy";
+import CampusLife from "../Components/CampusLife";
 
 function HomePage() {
     const navigate = useNavigate(); 
@@ -38,6 +39,7 @@ function HomePage() {
               />
             }
           />
+          <CampusLife/>
          
           <Campus />
           <NewLetter />
