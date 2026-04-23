@@ -5,7 +5,6 @@ import Button from "./Button";
 import { navLinks } from "../data";
 
 const NavBar = () => {
-
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -13,7 +12,7 @@ const NavBar = () => {
 
       <div className="flex justify-between items-center px-6 py-3">
 
-       
+        {/* LOGO */}
         <div className="flex items-center gap-3">
           <img src={logo} alt="Lucy College Logo" className="w-14 h-14 object-cover" />
 
@@ -22,26 +21,80 @@ const NavBar = () => {
           </h1>
         </div>
 
-       
+        {/* DESKTOP MENU */}
         <ul className="hidden md:flex items-center gap-8">
 
           {navLinks.map((nav, index) => (
-            <li key={index} className="text-base font-medium">
+            <li
+              key={index}
+              className="relative group text-base font-medium py-4"
+            >
+
+              {/* MAIN LINK */}
               <NavLink
                 to={nav.path}
                 className={({ isActive }) =>
                   isActive
-                    ? "text-blue-700 font-bold"
-                    : "text-blue-900 hover:text-blue-700 transition"
+                    ? "text-blue-700 font-bold flex items-center gap-1"
+                    : "text-blue-900 hover:text-blue-700 transition flex items-center gap-1"
                 }
               >
                 {nav.name}
+
+                {/* ARROW (^) */}
+                {nav.submenu && (
+                  <span className="text-xs transition-transform duration-300 group-hover:rotate-180">
+                    ▼
+                  </span>
+                )}
               </NavLink>
+
+              {/* DROPDOWN */}
+              {nav.submenu && (
+                <div
+                  className="
+                    absolute left-1/2 transform -translate-x-1/2
+                    top-full mt-1
+                    w-150 bg-white shadow-xl rounded-xl p-8
+                    opacity-0 invisible group-hover:opacity-100 group-hover:visible
+                    transition duration-200 z-50
+                  "
+                >
+
+                  <div className="grid grid-cols-3 gap-6">
+
+                    {nav.submenu.map((submenu, subIndex) => (
+                      <div key={subIndex} className="px-2">
+
+                        <h3 className="text-blue-700 font-semibold mb-3">
+                          {submenu.title}
+                        </h3>
+
+                        <ul className="space-y-2">
+                          {submenu.items.map((item, i) => (
+                            <li key={i}>
+                              <NavLink
+                                to={item.path}
+                                className="block text-gray-800 hover:text-blue-600 transition"
+                              >
+                                {item.name}
+                              </NavLink>
+                            </li>
+                          ))}
+                        </ul>
+
+                      </div>
+                    ))}
+
+                  </div>
+
+                </div>
+              )}
+
             </li>
           ))}
 
-          
-
+          {/* LOGIN */}
           <li>
             <NavLink to="/login">
               <Button text="Portal Login" />
@@ -50,7 +103,7 @@ const NavBar = () => {
 
         </ul>
 
-        {/* Mobile Menu Button */}
+        {/* MOBILE BUTTON */}
         <button
           className="md:hidden text-blue-900 text-2xl"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -60,7 +113,7 @@ const NavBar = () => {
 
       </div>
 
-      {/* Mobile Menu */}
+      {/* MOBILE MENU */}
       {menuOpen && (
         <div className="md:hidden bg-white shadow-md">
 

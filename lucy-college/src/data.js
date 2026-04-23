@@ -164,27 +164,43 @@ export const courses = [
 ];
 
 export const navLinks = [
-  { name: "Home", path: "/" },
-  {
-    name: "About",
-    path: "/about",
-    submenu: [
-      "Mission and Vision",
-      "Shareholders",
-      "History",
-      "Accreditation",
-      "Facilities",
-      "Staff",
-      "Faculty",
-      "Alumni"
-    ]
-  },
-  { name: "Courses", path: "/courses" },
-  { name: "Admission", path: "/admission" },
-  { name: "News and Events", path: "/news" },
-  { name: "Campus Life", path: "/campus" },
-  { name: "Contact Us", path: "/contact" }
-];
+    { name: "Home", path: "/" },
+    { name: "About",
+      submenu:[
+        {
+          title:"Who we are",
+          items:[
+          {name:"Lucy at a glance",path:"/about/glance"},
+          {name:"Our history",path:"about/history"},
+          {name:"Our mission and vision", path:"about/mission"},
+          {name:"The shareholders", path:"about/shareholders"},
+        ]
+        },
+        {
+          title:"LeaderShip and People",
+          items:[
+          {name:"President / Dean",path:"/about/president "},
+          {name:"Faculty & Staff",path:"about/faculty"},
+         
+          ]    
+        },
+        
+         {
+          title:"ACCREDITATION & RECOGNITION",
+          items:[
+          {name:"Certifications",path:"/about/president "},
+          {name:"Government Approval",path:"about/faculty"},
+          {name:"Partnerships",path:"about/faculty"},
+          ]    
+        },
+
+      ]
+     },
+    { name: "Courses", path: "/courses" },
+    { name: "Admission", path: "/admission" },
+    { name: "News and Events", path: "/news" },
+    { name: "Contact Us", path: "/contact" }
+  ];
 
 export const categories = [
         {
