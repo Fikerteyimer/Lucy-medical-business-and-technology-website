@@ -1,9 +1,19 @@
+import { twMerge } from "tailwind-merge";
+import clsx from "clsx";
+
 function Paragraph({ children, className }) {
   return (
-    <p className={`text-gray-700 text-md
-     leading-relaxed mb-6 text-left md:text-center max-w-4xl mx-auto ${className}`}>
+    <p
+      className={twMerge(
+        clsx(
+          "text-gray-700 text-md leading-relaxed text-left",
+          className
+        )
+      )}
+    >
       {children}
     </p>
   );
 }
+
 export default Paragraph;

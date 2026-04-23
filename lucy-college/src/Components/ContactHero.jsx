@@ -1,8 +1,7 @@
 import Heading from "./Heading";
 import Paragraph from "./Paragraph";
 import logo from '../assets/logo.jpg'
-import Horizontal from "./horizontal";
-
+import Horizontal from "./Horizontal";
 function ContactHero(){
     return(
         <>

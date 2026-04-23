@@ -5,7 +5,6 @@ function LucyAtAGlance(){
     return(
         <div>
             <NavBar/>
-            
             <AboutHero/>
         </div>
     );
