@@ -11,8 +11,6 @@ const NavBar = () => {
     <nav className="fixed top-0 left-0 w-full bg-white shadow-lg z-50">
 
       <div className="flex justify-between items-center px-6 py-3">
-
-        {/* LOGO */}
         <div className="flex items-center gap-3">
           <img src={logo} alt="Lucy College Logo" className="w-14 h-14 object-cover" />
 
