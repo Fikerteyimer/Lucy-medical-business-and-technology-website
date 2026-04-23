@@ -164,14 +164,27 @@ export const courses = [
 ];
 
 export const navLinks = [
-    { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
-    { name: "Courses", path: "/courses" },
-    { name: "Admission", path: "/admission" },
-    { name: "News and Events", path: "/news" },
-    { name: "Campus Life", path: "/campus" },
-    { name: "Contact Us", path: "/contact" }
-  ];
+  { name: "Home", path: "/" },
+  {
+    name: "About",
+    path: "/about",
+    submenu: [
+      "Mission and Vision",
+      "Shareholders",
+      "History",
+      "Accreditation",
+      "Facilities",
+      "Staff",
+      "Faculty",
+      "Alumni"
+    ]
+  },
+  { name: "Courses", path: "/courses" },
+  { name: "Admission", path: "/admission" },
+  { name: "News and Events", path: "/news" },
+  { name: "Campus Life", path: "/campus" },
+  { name: "Contact Us", path: "/contact" }
+];
 
 export const categories = [
         {
