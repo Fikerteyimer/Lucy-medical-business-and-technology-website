@@ -1,5 +1,5 @@
 import Paragraph from "./Paragraph";
-function Vision(){
+function VisionHero(){
     return(
         <div className="flex justify-between items-center m-20 gap-20">
              
@@ -11,4 +11,4 @@ function Vision(){
     );
 
 }
-export default Vision;
+export default VisionHero;

@@ -1,7 +1,6 @@
 import Subheading from "./Subheading";
 import logo from "../assets/logo.jpg";
 import Paragraph from "./Paragraph";
-
 function LucyAtAglanceBody() {
   return (
     <div className="px-6 md:px-16 mt-10 space-y-6">
@@ -10,7 +9,6 @@ function LucyAtAglanceBody() {
         text="Lucy college at a glance"
         className="text-center md:text-left text-2xl md:text-3xl text-blue-900 leading-tight"
       />
-
       <div className="flex items-start gap-6 my-6">
         
         <img
@@ -18,8 +16,7 @@ function LucyAtAglanceBody() {
           alt="lucy college logo"
           className="w-28 h-28 object-cover "
         />
-
-
+        
         <div className="w-0.5 h-20 bg-blue-700 mt-1"></div>
 
         {/* Text */}
