@@ -1,13 +1,14 @@
 import Heading from "./Heading";
 import Paragraph from "./Paragraph";
 import logo from '../assets/logo.jpg'
+import Horizontal from "./horizontal";
 
 function ContactHero(){
     return(
         <>
         <div className="mt-30 break-keep animate-fadeUp">
             <img src={logo} className="w-30 h-30 mx-auto object-cover"/>
-            <hr className="border-t-3 border-blue-900 w-30 mx-auto " />
+            <Horizontal/>
             <Heading title="Contact Us"/>
             <Paragraph children="Get in touch with us today your journey at Lucy College starts here!" className="text-center"/>
 
