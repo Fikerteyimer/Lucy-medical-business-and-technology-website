@@ -172,7 +172,7 @@ export const navLinks = [
           items:[
           {name:"Lucy at a glance",path:"/LucyAtAGlance"},
           {name:"Our history",path:"/history"},
-          {name:"Our mission and vision", path:"/mission-vision"},
+          {name:"Our mission and vision", path:"/VisionMission"},
           {name:"The shareholders", path:"/shareholders"},
         ]
         },
