@@ -75,7 +75,7 @@ const NavBar = () => {
                             <li key={i}>
                               <NavLink
                                 to={item.path}
-                                className="block text-gray-800 hover:text-blue-600 transition"
+                                className="block text-sm text-gray-800 hover:text-blue-600 transition"
                               >
                                 {item.name}
                               </NavLink>
