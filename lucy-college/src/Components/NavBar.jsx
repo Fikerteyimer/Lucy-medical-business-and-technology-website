@@ -21,7 +21,7 @@ const NavBar = () => {
           </h1>
         </div>
 
-        {/* DESKTOP MENU */}
+        
         <ul className="hidden md:flex items-center gap-8">
 
           {navLinks.map((nav, index) => (
@@ -30,7 +30,7 @@ const NavBar = () => {
               className="relative group text-base font-medium py-4"
             >
 
-              {/* MAIN LINK */}
+              
               <NavLink
                 to={nav.path}
                 className={({ isActive }) =>
@@ -41,7 +41,6 @@ const NavBar = () => {
               >
                 {nav.name}
 
-                {/* ARROW (^) */}
                 {nav.submenu && (
                   <span className="text-xs transition-transform duration-300 group-hover:rotate-180">
                     ▼
@@ -49,7 +48,6 @@ const NavBar = () => {
                 )}
               </NavLink>
 
-              {/* DROPDOWN */}
               {nav.submenu && (
                 <div
                   className="

@@ -12,6 +12,7 @@ import CampusLife from './Pages/CampusLife'
 import ContactUs from './Pages/ContactUs'
 import Login from './Pages/Login'
 import CourseDetails from './Components/CourseDetails'
+import LucyAtAGlance from './Components/LucyAtAGlance'
 
 
 
@@ -22,7 +23,7 @@ function App() {
     <>
     <Routes>
       <Route index  element={<HomePage/>}></Route>
-      <Route path ="/about" element={<AboutPage/>}></Route>
+      <Route path="/LucyAtAGlance" element={<LucyAtAGlance/>}></Route>
       <Route path ="/courses" element={<Programs/>}></Route>
       <Route path="/courses/:school" element={<CourseDetails />} />
       <Route path ="/admission" element={<Admission/>}></Route>

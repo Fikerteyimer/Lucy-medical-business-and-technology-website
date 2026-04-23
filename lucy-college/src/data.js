@@ -170,17 +170,17 @@ export const navLinks = [
         {
           title:"Who we are",
           items:[
-          {name:"Lucy at a glance",path:"/about/glance"},
-          {name:"Our history",path:"about/history"},
-          {name:"Our mission and vision", path:"about/mission"},
-          {name:"The shareholders", path:"about/shareholders"},
+          {name:"Lucy at a glance",path:"/LucyAtAGlance"},
+          {name:"Our history",path:"/history"},
+          {name:"Our mission and vision", path:"/mission"},
+          {name:"The shareholders", path:"/shareholders"},
         ]
         },
         {
           title:"LeaderShip and People",
           items:[
-          {name:"President / Dean",path:"/about/president "},
-          {name:"Faculty & Staff",path:"about/faculty"},
+          {name:"President / Dean",path:"/president "},
+          {name:"Faculty & Staff",path:"/faculty"},
          
           ]    
         },
@@ -188,9 +188,9 @@ export const navLinks = [
          {
           title:"ACCREDITATION & RECOGNITION",
           items:[
-          {name:"Certifications",path:"/about/president "},
-          {name:"Government Approval",path:"about/faculty"},
-          {name:"Partnerships",path:"about/faculty"},
+          {name:"Certifications",path:"/Certifications "},
+          {name:"Government Approval",path:"faculty"},
+          {name:"Partnerships",path:"/Partnerships"},
           ]    
         },
 
