@@ -172,7 +172,7 @@ export const navLinks = [
           items:[
           {name:"Lucy at a glance",path:"/LucyAtAGlance"},
           {name:"Our history",path:"/history"},
-          {name:"Our mission and vision", path:"/mission"},
+          {name:"Our mission and vision", path:"/mission-vision"},
           {name:"The shareholders", path:"/shareholders"},
         ]
         },
@@ -189,7 +189,7 @@ export const navLinks = [
           title:"ACCREDITATION & RECOGNITION",
           items:[
           {name:"Certifications",path:"/Certifications "},
-          {name:"Government Approval",path:"faculty"},
+          {name:"Government Approval",path:"/faculty"},
           {name:"Partnerships",path:"/Partnerships"},
           ]    
         },

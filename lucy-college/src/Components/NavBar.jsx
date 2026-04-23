@@ -3,7 +3,7 @@ import logo from "../assets/logo.jpg";
 import { NavLink } from "react-router-dom";
 import Button from "./Button";
 import { navLinks } from "../data";
-
+import {FaArrowUp} from "react-icons/fa";
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -33,7 +33,7 @@ const NavBar = () => {
                 to={nav.path}
                 className={({ isActive }) =>
                   isActive
-                    ? "text-blue-700 font-bold flex items-center gap-1"
+                    ? "text-blue-900 font-bold flex items-center gap-1"
                     : "text-blue-900 hover:text-blue-700 transition flex items-center gap-1"
                 }
               >
@@ -41,7 +41,7 @@ const NavBar = () => {
 
                 {nav.submenu && (
                   <span className="text-xs transition-transform duration-300 group-hover:rotate-180">
-                    ▼
+                   <span>v</span>
                   </span>
                 )}
               </NavLink>
