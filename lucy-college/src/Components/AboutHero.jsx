@@ -1,6 +1,7 @@
 import Heading from "./Heading";
 import Paragraph from "./Paragraph";
 import Dessie from "../assets/Dessie.jpg";
+import Horizontal from "./horizontal";
 
 function AboutHero() {
   return (
@@ -16,8 +17,8 @@ function AboutHero() {
         <Heading
           title="About Us"
           className="text-left text-white text-4xl md:text-5xl font-bold mb-4"
-          
         />
+        <Horizontal/>
       </div>
 
     </div>

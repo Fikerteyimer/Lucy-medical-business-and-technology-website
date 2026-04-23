@@ -6,5 +6,4 @@ function Paragraph({ children, className }) {
     </p>
   );
 }
-
 export default Paragraph;
