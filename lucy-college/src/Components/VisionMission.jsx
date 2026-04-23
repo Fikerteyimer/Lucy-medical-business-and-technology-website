@@ -1,6 +1,7 @@
 import NavBar from "./NavBar";
+import Values from "./Values";
 import Vision from "./Vision";
-import { FaEye, FaGlobe, FaBook } from "react-icons/fa";
+import { FaEye, FaGlobe, FaBook, FaBullseye } from "react-icons/fa";
 
 export default function VisionMission() {
   return (
@@ -17,6 +18,14 @@ export default function VisionMission() {
           Icon2={FaGlobe}
           Icon3={FaBook}
           bgColor="bg-blue-400"
+          items={[
+            "  Provision of educational opportunities relevant to societal needs.",
+            " Engage in research activities responsive to the needs of the society.",
+            "Respond to societal problems through active outreach and community engagement.",
+            " Produce graduates who are confident in their ability of professional proactive and leadership through trainings aided by appropriate technology.",
+            "  Respond to societal problems through active community engagement.",
+            "Encourage students to participate in hands-on professional development activities and to expand their academic and instructional knowledge through planned programs of service and scholarly creative activities"
+          ]}
         />
 
         <Vision
@@ -26,7 +35,13 @@ export default function VisionMission() {
           Icon2={FaGlobe}
           Icon3={FaBook}
           bgColor="bg-pink-400"
+          items={[
+            "Lucy Medical Business and Technology College aspires to be one of the leading higher education institutions in Ethiopia providing educational opportunities responsive to the needs of the society through graduate and undergraduate studies, research and community services by 2030.",
+           
+          ]}
+
         />
+        <Values/>
 
       </div>
     </div>

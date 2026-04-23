@@ -1,8 +1,9 @@
 import { values } from "../data";
+import Subheading from "./Subheading";
 function Values(){
     return(
         <div className=" p-30">
-            <h2 className="text-3xl text-blue-900 text-center mb-20 font-bold"> Our core values</h2>
+            <Subheading text="Our core values" className="font-bold"/>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 ">
             
             
