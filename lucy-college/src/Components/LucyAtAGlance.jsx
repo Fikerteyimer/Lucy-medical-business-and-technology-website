@@ -9,6 +9,7 @@ function LucyAtAGlance(){
             <AboutHero/>
             <LucyAtAglanceBody/>
             <NewsLetter/>
+            
         </div>
     );
 
