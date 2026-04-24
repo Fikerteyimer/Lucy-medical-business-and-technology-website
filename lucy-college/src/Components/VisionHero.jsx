@@ -16,7 +16,7 @@ export default function VisionHero({ text, title }) {
         w-full
         min-h-45 sm:min-h-55 md:min-h-60
         flex items-center justify-start
-        mt-6 md:mt-8 md:ml-50 animate-fadeUp
+        mt-6 md:mt-8 md:ml-50 animate-fadeRight
       ">
         <div className="flex flex-col  md:items-center justify-center ml-6 md-ml-16 text-white text-3xl font-bold  ">
         <Heading title={title} className="text-white md:text-5xl font-bold my-0 py-0 " />
@@ -28,13 +28,13 @@ export default function VisionHero({ text, title }) {
     </div>
     <style>
         {`
-          @keyframes fadeUp {
-            from { opacity: 0; transform: translateX(50px); }
-            to { opacity: 1; transform: translateX(0); }
-          }
-          .animate-fadeUp {
-            animation: fadeUp 1s ease forwards;
-          }
+          @keyframes fadeRight {
+         from { opacity: 0; transform: translateX(50px); }
+         to { opacity: 1; transform: translateX(0); }
+        }
+        .animate-fadeRight {
+        animation: fadeRight 1s ease forwards;
+         }
         `}
       </style>
     </>

@@ -49,7 +49,8 @@ function Vision({title,items = [],bgColor = "bg-blue-500",
   const [Icon1, Icon2, Icon3] = getTopIcons();
 
   return (
-    <div className="flex flex-col items-center gap-6 py-8">
+    <>
+    <div className="flex flex-col items-center gap-6 py-8 animate-fadeUp">
 
       <div className="flex flex-col items-center gap-4">
 
@@ -92,6 +93,19 @@ function Vision({title,items = [],bgColor = "bg-blue-500",
       </ul>
 
     </div>
+    <style>
+        {`
+          @keyframes fadeUp {
+          from { opacity: 0; transform: translateY(50px); }
+          to { opacity: 1; transform: translateY(0); }
+      }
+
+       .animate-fadeUp {
+       animation: fadeUp 1s ease forwards;
+        }
+        `}
+      </style>
+      </>
   );
 }
 
