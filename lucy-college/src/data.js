@@ -209,6 +209,17 @@ export const navLinks = [
           {name:"Academic Cases", path:"/cases"},
         ]
         },
+        {
+          title:"Admission Information",
+          items:[
+          {name:"Overview",path:"/Overview"},
+          {name:"Calender",path:"/calender"},
+          {name:"Admission", path:"/admission"},
+          {name:"Academic Cases", path:"/academic-cases"},
+          {name:"Tuition Service fees", path:"/tuition-Service-fees"},
+          {name:"Academic Cases", path:"/cases"},
+        ]
+        },
         
       ]
 
