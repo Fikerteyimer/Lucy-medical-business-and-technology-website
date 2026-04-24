@@ -1,15 +1,8 @@
-import {
-  FaUsers,
-  FaHandshake,
-  FaBalanceScale,
-  FaStar,
-  FaChartLine,
-  FaShieldAlt,
-  FaEye,
-  FaGraduationCap,
-} from "react-icons/fa";
+import {FaUsers,FaHandshake,FaBalanceScale,FaStar,FaChartLine,FaShieldAlt,FaEye,FaGraduationCap,} from "react-icons/fa";
+import Subheading from "./Subheading";
+import Horizontal from './Horizontal';
 
-const values = [
+const leftValues = [
   {
     icon: <FaUsers />,
     title: "Diversity",
@@ -30,6 +23,9 @@ const values = [
     title: "Excellence",
     desc: "Commitment to quality education, research and service.",
   },
+];
+
+const rightValues = [
   {
     icon: <FaChartLine />,
     title: "Effective Engagement",
@@ -54,36 +50,57 @@ const values = [
 
 export default function CoreValues() {
   return (
-    <section className="bg-white py-20 px-6 md:px-20">
-      {/* Header */}
+    <section className="py-20 px-6 md:px-20">
+      
       <div className="text-center mb-16">
-        <h2 className="text-4xl font-bold text-blue-900">
-          Our Core Values
-        </h2>
-        <div className="w-24 h-1 bg-yellow-500 mx-auto mt-4 rounded-full"></div>
+        <Subheading text="Our Core Values" className="font-bold"/>
+        <Horizontal/>
       </div>
 
-      {/* Timeline */}
-      <div className="relative border-l-4 border-blue-200 max-w-3xl mx-auto">
-        {values.map((item, index) => (
-          <div key={index} className="mb-12 ml-6 relative">
-            
-            {/* Circle Icon */}
-            <div className="absolute -left-8 top-1 w-14 h-14 rounded-full bg-blue-700 text-white flex items-center justify-center text-xl shadow-lg">
-              {item.icon}
+      <div className="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+        
+        <div className="space-y-8">
+          {leftValues.map((item, index) => (
+            <div
+              key={index}
+              className="flex items-start gap-4 bg-gray-50 p-6 rounded-xl shadow h-37.5"
+            >
+              <div className="w-12 h-12 flex items-center justify-center rounded-full bg-blue-700 text-white text-lg">
+                {item.icon}
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-800">
+                  {item.title}
+                </h3>
+                <p className="text-gray-600 text-sm mt-1">
+                  {item.desc}
+                </p>
+              </div>
             </div>
+          ))}
+        </div>
 
-            {/* Content */}
-            <div className="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition">
-              <h3 className="text-xl font-semibold text-gray-800">
-                {item.title}
-              </h3>
-              <p className="text-gray-600 mt-2 text-sm leading-relaxed">
-                {item.desc}
-              </p>
+        <div className="space-y-8">
+          {rightValues.map((item, index) => (
+            <div
+              key={index}
+              className="flex items-start gap-4 bg-gray-50 p-6 rounded-xl shadow h-[150px]"
+            >
+              <div className="w-12 h-12 flex items-center justify-center rounded-full bg-blue-700 text-white text-lg">
+                {item.icon}
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-800">
+                  {item.title}
+                </h3>
+                <p className="text-gray-600 text-sm mt-1">
+                  {item.desc}
+                </p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+
       </div>
     </section>
   );
