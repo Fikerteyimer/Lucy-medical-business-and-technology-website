@@ -1,3 +1,4 @@
+import Horizontal from "./Horizontal";
 import Paragraph from "./Paragraph";
 import Subheading from "./Subheading";
 import {
@@ -70,9 +71,10 @@ function Vision({title,items = [],bgColor = "bg-blue-500",
         </div>
 
       </div>
-
-      <Subheading text={title} className="font-bold" />
-
+      <div  className="text-center mb-10">
+      <Subheading text={title} className="font-bold mb-0" />
+      <Horizontal />
+      </div>
       <ul className="max-w-xl w-full space-y-3">
         {items.map((item, index) => (
           <li key={index} className="flex items-start gap-3">
