@@ -12,8 +12,8 @@ import CampusLife from './Pages/CampusLife'
 import ContactUs from './Pages/ContactUs'
 import Login from './Pages/Login'
 import CourseDetails from './Components/CourseDetails'
-import LucyAtAGlance from './Components/LucyAtAGlance'
-import VisionMission from './Components/VisionMission';
+import LucyAtAGlance from './Pages/About/LucyAtAGlance'
+import VisionMission from './Pages/About/VisionMission';
 
 
 

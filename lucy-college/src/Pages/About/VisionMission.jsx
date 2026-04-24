@@ -1,10 +1,10 @@
-import CoreValues from "./Values";
-import NavBar from "./NavBar";
-import Vision from "./Vision";
+import CoreValues from "../../Components/Values";
+import NavBar from "../../Components/NavBar";
+import Vision from "../../Components/Vision";
 import { FaEye, FaGlobe, FaBook, FaBullseye } from "react-icons/fa";
-import NewsLetter from './NewsLetter';
-import Footer from './Footer';
-import VisionHero from './VisionHero';
+import NewsLetter from '../../Components/NewsLetter';
+import Footer from '../../Components/Footer';
+import VisionHero from '../../Components/VisionHero';
 
 export default function VisionMission() {
   return (
