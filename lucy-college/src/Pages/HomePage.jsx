@@ -27,7 +27,12 @@ function HomePage() {
             items={categories}
             className="w-20 h-20 mx-auto"
           />
-          <WhyLucy/>
+          <WhyLucy 
+            title="Why You Choose Lucy College?"
+            text="Lucy Medical, Business and Technology College offers a unique blend of
+                  practical training, academic excellence, and student-centered learning
+                  to prepare graduates for successful careers and societal contribution."
+          />
           <Counter />
           <LatestNews/>
           
