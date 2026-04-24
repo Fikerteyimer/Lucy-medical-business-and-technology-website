@@ -10,7 +10,7 @@ export default function VisionMission() {
   return (
     <div>
       <NavBar />
-      <VisionHero text="Our MISSION, VISION AND CORE VALUES" />
+      <VisionHero text=" MISSION, VISION AND CORE VALUES" title="Our" />
       <div className="grid md:grid-cols-2 gap-16 px-6 md:px-20 lg:px-40 py-16">
         <Vision
           title="Mission"
