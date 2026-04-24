@@ -67,7 +67,7 @@ const NavBar = () => {
                         </h3>
 
                         <ul className="space-y-2">
-                          {submenu.items.map((item, i) => (
+                          {submenu.items && submenu.items.map((item, i) => (
                             <li key={i}>
                               <NavLink
                                 to={item.path}
