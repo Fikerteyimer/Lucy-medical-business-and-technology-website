@@ -6,7 +6,7 @@ import {
   FaChalkboardTeacher,
   FaBook,
 } from "react-icons/fa";
-
+import Paragraph from './Paragraph';
 function Counter() {
   const properties = [
     { num: 2, behavior: "Campuses", icon: FaUniversity },
@@ -30,54 +30,51 @@ function Counter() {
   }, []);
 
   return (
-    <section className="py-24 px-4 md:px-16 bg-gradient-to-b from-white to-blue-50 mt-20">
+  <section className="py-16 px-4 mt-20 bg-gradient-to-b from-blue-50 to-white">
+    
+    {/* TITLE */}
+    <div className="text-center mb-12">
+      <Heading title="Our Achievements" />
+      <Paragraph
+        className="text-gray-500 text-center max-w-xl mx-auto"
+      >
+        Excellence in education, innovation, and growth
+      </Paragraph>
+    </div>
 
-      {/* TITLE */}
-      <div className="text-center mb-14">
-        <Heading title="Our Achievements" />
-        <p className="text-gray-500 mt-2">
-          Excellence in education, innovation, and growth
-        </p>
-      </div>
+    {/* CARD CONTAINER (NOT TOO WIDE) */}
+    <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
+      
+      {properties.map((property, index) => {
+        const Icon = property.icon;
 
-      {/* STATS STRIP (NO CARDS) */}
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10 md:gap-0">
-
-        {properties.map((property, index) => {
-          const Icon = property.icon;
-
-          return (
-            <div
-              key={index}
-              className="flex flex-col items-center justify-center text-center"
-            >
-
-              {/* ICON */}
-              <div className="text-blue-700 text-3xl mb-2">
-                <Icon />
-              </div>
-
-              {/* NUMBER */}
-              <h3 className="text-4xl md:text-5xl font-extrabold text-blue-900">
-                {counts[index]}
-                {property.plus || ""}
-              </h3>
-
-              {/* LABEL */}
-              <p className="text-gray-600 text-lg mt-1 font-medium">
-                {property.behavior}
-              </p>
-
-              {/* SMALL UNDERLINE EFFECT */}
-              <div className="w-10 h-[2px] bg-blue-500 mt-3 rounded-full"></div>
-
+        return (
+          <div
+            key={index}
+            className="bg-white/70 backdrop-blur-lg border border-gray-200 rounded-2xl shadow-sm hover:shadow-xl transition duration-300 p-6 flex flex-col items-center text-center"
+          >
+            {/* ICON */}
+            <div className="bg-blue-100 p-3 rounded-full mb-3">
+              <Icon className="text-blue-700 text-xl" />
             </div>
-          );
-        })}
 
-      </div>
-    </section>
-  );
+            {/* NUMBER */}
+            <h3 className="text-3xl md:text-4xl font-bold text-gray-900">
+              {counts[index]}
+              {property.plus || ""}
+            </h3>
+
+            {/* LABEL */}
+            <p className="text-gray-500 text-sm mt-1">
+              {property.behavior}
+            </p>
+          </div>
+        );
+      })}
+
+    </div>
+  </section>
+);
 }
 
 export default Counter;
