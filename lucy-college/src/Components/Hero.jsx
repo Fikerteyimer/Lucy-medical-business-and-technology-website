@@ -15,18 +15,16 @@ const Hero = () => {
         }}
       >
 
-        {/* ENHANCED OVERLAY (same opacity feel, smoother) */}
         <div className="absolute inset-0 bg-[#0B2C4D]/60 backdrop-brightness-75"></div>
 
-        {/* CONTENT */}
         <div className="relative max-w-xl ml-6 md:ml-16 text-white animate-fadeUp">
 
-          {/* SMALL TAG */}
+          
           <p className="text-[#07b0df] uppercase tracking-widest text-sm mb-3">
             Lucy College
           </p>
 
-          {/* TITLE */}
+         
           <h1 className="text-3xl md:text-5xl font-extrabold leading-tight">
             Empowering Minds,
             <br />
@@ -35,7 +33,7 @@ const Hero = () => {
             </span>
           </h1>
 
-          {/* DESCRIPTION */}
+          
           <p className="mt-6 text-base md:text-lg text-gray-200 leading-relaxed">
             We don’t just teach — we inspire, preparing students to thrive in
             healthcare, business, and technology careers. Step into a community
@@ -43,7 +41,7 @@ const Hero = () => {
             your future.
           </p>
 
-          {/* BUTTON */}
+         
           <div className="mt-10">
             <Link to="/courses">
               <Button
@@ -60,12 +58,12 @@ const Hero = () => {
 
         </div>
 
-        {/* SUBTLE GLOW EFFECT */}
+        
         <div className="absolute bottom-10 right-10 w-52 h-52 bg-cyan-400/20 blur-3xl rounded-full"></div>
 
       </div>
 
-      {/* ANIMATION */}
+      
       <style>
         {`
           @keyframes fadeUp {
