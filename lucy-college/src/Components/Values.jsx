@@ -54,7 +54,7 @@ export default function CoreValues() {
       
       <div className="text-center mb-16">
         <Subheading text="Our Core Values" className="font-bold"/>
-        <Horizontal/>
+        <Horizontal className="border-red-400"/>
       </div>
 
       <div className="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
