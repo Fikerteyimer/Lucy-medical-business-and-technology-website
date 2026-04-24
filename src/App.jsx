@@ -22,10 +22,10 @@ function App() {
     <>
     <Routes>
       <Route index  element={<HomePage/>}></Route>
-      <Route path ="/about" element={<AboutPage/>}></Route>
+      
       <Route path ="/courses" element={<Programs/>}></Route>
       <Route path="/courses/:school" element={<CourseDetails />} />
-      <Route path ="/admission" element={<Admission/>}></Route>
+      <Route path ="/admissionzz" element={<Admission/>}></Route>
       <Route path ="/news" element={<NewsAndEvents/>}></Route>
       <Route path ="/campus" element={<CampusLife/>}></Route>
       <Route path ="/contact" element={<ContactUs/>}></Route>

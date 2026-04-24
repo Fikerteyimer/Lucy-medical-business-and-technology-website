@@ -14,6 +14,7 @@ import Login from './Pages/Login'
 import CourseDetails from './Components/CourseDetails'
 import LucyAtAGlance from './Pages/About/LucyAtAGlance'
 import VisionMission from './Pages/About/VisionMission';
+import Overview from './Pages/Admission/OverView';
 
 
 
@@ -26,6 +27,7 @@ function App() {
       <Route index  element={<HomePage/>}></Route>
       <Route path="/LucyAtAGlance" element={<LucyAtAGlance/>}></Route>
       <Route path="/VisionMission" element={<VisionMission/>}/>
+      <Route path="/Overview" element={<Overview/>}/>
       <Route path ="/courses" element={<Programs/>}></Route>
       <Route path="/courses/:school" element={<CourseDetails />} />
       <Route path ="/admission" element={<Admission/>}></Route>
