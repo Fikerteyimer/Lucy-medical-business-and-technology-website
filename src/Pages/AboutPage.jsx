@@ -1,4 +1,4 @@
-import AboutSections from "../Components/AboutSections";
+
 import CardGrid from "../Components/CardGrid";
 import Footer from "../Components/Footer";
 import Heros from "../Components/Heros";
@@ -17,7 +17,7 @@ function AboutPage(){
         <div>
             <NavBar/>
             
-            <AboutSections/>
+           
           
             <MissionVision
                title="Our Vision"

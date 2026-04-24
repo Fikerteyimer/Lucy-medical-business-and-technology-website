@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import NavBar from "../Components/NavBar";
 import Hero from '../Components/Hero';
-import AboutSection from "../Components/AboutSection";
 import Counter from '../Components/Counter';
 import NewLetter from "../Components/NewsLetter";
 import Footer from "../Components/Footer";
