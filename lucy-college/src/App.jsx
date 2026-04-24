@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import NavBar from './Components/NavBar'
 import HomePage from './Pages/HomePage'
-import AboutPage from './Pages/AboutPage'
+
 import Programs from './Pages/Programs'
 import Admission from './Pages/Admission'
 import NewsAndEvents from './Pages/NewsAndEvents'

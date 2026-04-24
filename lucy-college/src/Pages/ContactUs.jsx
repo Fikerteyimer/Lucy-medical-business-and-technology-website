@@ -4,7 +4,7 @@ import Footer from "../Components/Footer";
 import NavBar from "../Components/NavBar";
 import NewLetter from "../Components/NewsLetter";
 import ContactSection from "../Components/ContactSection";
-import Heros from "../Components/Heros";
+
 
 function ContactUs(){
     return(

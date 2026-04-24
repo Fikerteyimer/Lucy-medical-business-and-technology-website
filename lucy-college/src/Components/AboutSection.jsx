@@ -28,7 +28,7 @@ function AboutSection() {
           className="flex justify-center md:justify-start">
           <Button 
             text="More About Us"
-            onClick={() => navigate("/about")} />
+            onClick={() => navigate("/LucyAtAGlance")} />
         </div>
       </div>
 
