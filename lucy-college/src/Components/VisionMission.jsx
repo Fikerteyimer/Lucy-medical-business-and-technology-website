@@ -4,11 +4,13 @@ import Vision from "./Vision";
 import { FaEye, FaGlobe, FaBook, FaBullseye } from "react-icons/fa";
 import NewsLetter from './NewsLetter';
 import Footer from './Footer';
+import VisionHero from './VisionHero';
 
 export default function VisionMission() {
   return (
     <div>
       <NavBar />
+      <VisionHero text="Our MISSION, VISION AND CORE VALUES" />
       <div className="grid md:grid-cols-2 gap-16 px-6 md:px-20 lg:px-40 py-16">
         <Vision
           title="Mission"
