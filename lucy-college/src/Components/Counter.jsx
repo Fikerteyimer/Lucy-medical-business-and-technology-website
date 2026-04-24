@@ -1,49 +1,80 @@
 import { useState, useEffect } from "react";
 import Heading from "./Heading";
+import {
+  FaUniversity,
+  FaUserGraduate,
+  FaChalkboardTeacher,
+  FaBook,
+} from "react-icons/fa";
 
 function Counter() {
   const properties = [
-    { num: 2, behavior: "Campuses" },
-    { num: 500, behavior: "Students", plus: "+" },
-    { num: 50, behavior: "Faculty Members", plus: "+" },
-    { num: 7, behavior: "Courses", plus: "+" },
+    { num: 2, behavior: "Campuses", icon: FaUniversity },
+    { num: 500, behavior: "Students", plus: "+", icon: FaUserGraduate },
+    { num: 50, behavior: "Faculty Members", plus: "+", icon: FaChalkboardTeacher },
+    { num: 7, behavior: "Courses", plus: "+", icon: FaBook },
   ];
 
   const [counts, setCounts] = useState(properties.map(() => 0));
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCounts((prevCounts) =>
-        prevCounts.map((count, index) =>
-          count < properties[index].num ? count + 1 : count
+      setCounts((prev) =>
+        prev.map((count, i) =>
+          count < properties[i].num ? count + 5 : properties[i].num
         )
       );
-    }, 20);
+    }, 30);
 
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <section className="py-20 px-4 md:px-16 bg-gray-50 mt-30">
-      <div className="max-w-7xl mx-auto">
-        <Heading title=" Our Achievements"/>
+    <section className="py-24 px-4 md:px-16 bg-gradient-to-b from-white to-blue-50 mt-20">
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-          {properties.map((property, index) => (
+      {/* TITLE */}
+      <div className="text-center mb-14">
+        <Heading title="Our Achievements" />
+        <p className="text-gray-500 mt-2">
+          Excellence in education, innovation, and growth
+        </p>
+      </div>
+
+      {/* STATS STRIP (NO CARDS) */}
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10 md:gap-0">
+
+        {properties.map((property, index) => {
+          const Icon = property.icon;
+
+          return (
             <div
               key={index}
-              className="bg-gradient-to-br from-blue-600 to-blue-400 rounded-3xl shadow-lg p-8 flex flex-col items-center justify-center transform transition duration-300 hover:scale-105"
+              className="flex flex-col items-center justify-center text-center"
             >
-              <h3 className="text-4xl md:text-5xl font-extrabold text-white mb-2">
+
+              {/* ICON */}
+              <div className="text-blue-700 text-3xl mb-2">
+                <Icon />
+              </div>
+
+              {/* NUMBER */}
+              <h3 className="text-4xl md:text-5xl font-extrabold text-blue-900">
                 {counts[index]}
                 {property.plus || ""}
               </h3>
-              <p className="text-white/90 text-lg md:text-xl font-medium text-center">
+
+              {/* LABEL */}
+              <p className="text-gray-600 text-lg mt-1 font-medium">
                 {property.behavior}
               </p>
+
+              {/* SMALL UNDERLINE EFFECT */}
+              <div className="w-10 h-[2px] bg-blue-500 mt-3 rounded-full"></div>
+
             </div>
-          ))}
-        </div>
+          );
+        })}
+
       </div>
     </section>
   );
