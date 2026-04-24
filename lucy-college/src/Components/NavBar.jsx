@@ -6,7 +6,6 @@ import { navLinks } from "../data";
 
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeMenu, setActiveMenu] = useState(null);
   const [openSubmenu, setOpenSubmenu] = useState(null);
 
   const toggleSubmenu = (index) => {
@@ -21,7 +20,7 @@ const NavBar = () => {
 
         {/* LOGO */}
         <div className="flex items-center gap-3">
-          <img src={logo} alt="logo" className="w-12 h-12 rounded-full object-cover" />
+          <img src={logo} className="w-12 h-12 rounded-full object-cover" />
           <h1 className="text-blue-900 text-xl font-bold">
             Lucy <span className="text-blue-500">College</span>
           </h1>
@@ -31,33 +30,39 @@ const NavBar = () => {
         <ul className="hidden md:flex items-center gap-8">
 
           {navLinks.map((nav, index) => (
-            <li key={index} className="relative">
+            <li key={index} className="relative group">
 
               {/* MAIN LINK */}
-              <button
-                onClick={() =>
-                  setActiveMenu(activeMenu === index ? null : index)
-                }
-                className="text-blue-900 hover:text-blue-600 flex items-center gap-1"
+              <NavLink
+                to={nav.path}
+                className="text-blue-900 hover:text-blue-600 flex items-center gap-1 py-4"
               >
                 {nav.name}
-                {nav.submenu && <span className="text-xs">▼</span>}
-              </button>
+                {nav.submenu && (
+                  <span className="text-xs group-hover:rotate-180 transition">
+                    ▼
+                  </span>
+                )}
+              </NavLink>
 
-              {/* ================= CLICK-BASED MEGA MENU ================= */}
-              {nav.submenu && activeMenu === index && (
-                <div
-                  className="
-                    absolute left-1/2 -translate-x-1/2 top-full mt-2
-                    w-[540px] bg-white shadow-2xl rounded-2xl p-6
-                    z-50
-                  "
-                >
+              {/* ================= HOVER MEGA MENU (FIXED STABLE VERSION) ================= */}
+              {nav.submenu && (
+                <div className="
+                  absolute left-1/2 -translate-x-1/2 top-full
+                  mt-0 pt-3
+                  w-[540px] bg-white shadow-2xl rounded-2xl p-6
+                  opacity-0 invisible pointer-events-none
+                  group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto
+                  transition-all duration-200
+                ">
 
                   <div className="grid grid-cols-2 gap-4">
 
                     {nav.submenu.map((submenu, i) => (
-                      <div key={i} className="bg-gray-50 rounded-xl p-4">
+                      <div
+                        key={i}
+                        className="bg-gray-50 hover:bg-blue-50 rounded-xl p-4 transition"
+                      >
 
                         {/* TITLE */}
                         <h3 className="text-blue-800 font-semibold mb-3 border-b pb-2">
@@ -71,7 +76,6 @@ const NavBar = () => {
                             <NavLink
                               key={j}
                               to={item.path}
-                              onClick={() => setActiveMenu(null)}
                               className="
                                 flex items-center gap-2 text-sm text-gray-700
                                 hover:text-blue-600 hover:translate-x-1 transition py-1
