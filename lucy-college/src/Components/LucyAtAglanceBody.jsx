@@ -5,10 +5,6 @@ function LucyAtAglanceBody() {
   return (
     <div className="px-6 md:px-16 mt-10 space-y-6">
       
-      <Subheading
-        text="Lucy college at a glance"
-        className="text-center md:text-left text-2xl md:text-3xl text-blue-900 leading-tight"
-      />
       <div className="flex items-start gap-6 my-6">
         
         <img
