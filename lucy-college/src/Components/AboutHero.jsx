@@ -8,7 +8,7 @@ function AboutHero({background}) {
       className="relative  min-h-[65vh] flex items-center bg-cover bg-center px-6 md:px-16"
       style={{ backgroundImage: `url(${background})` }}
     >
-      <div className="absolute inset-0 bg-blue-800/60"></div>
+      <div className="absolute inset-0 bg-blue-900/80"></div>
       <div className="relative z-10 text-white max-w-3xl w-full">
         <Paragraph className="text-white text-sm tracking-widest uppercase mb-2 text-left">
           Lucy-at-a-glance
