@@ -7,6 +7,8 @@ function AboutHero({
   title,
   text,
   height = "70vh",
+  overlay = "bg-blue-900/80", 
+  textColor = "text-white",
 }) {
   return (
     <div
@@ -16,22 +18,22 @@ function AboutHero({
         minHeight: height,
       }}
     >
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-blue-900/80"></div>
+      {/* Overlay (Tailwind class) */}
+      <div className={`absolute inset-0 ${overlay}`}></div>
 
       {/* Content */}
-      <div className="relative z-10 text-white max-w-3xl w-full">
-        
-        <Paragraph className="text-white text-sm tracking-widest uppercase mb-2 text-left">
+      <div className="relative z-10 max-w-3xl w-full">
+
+        <Paragraph className={`${textColor} text-md mb-2 text-left`}>
           {children}
         </Paragraph>
 
         <Heading
           title={title}
-          className="text-white text-4xl md:text-5xl font-bold mb-4 text-left"
+          className={`${textColor} text-4xl md:text-5xl font-bold mb-4 text-left`}
         />
 
-        <Paragraph className="text-white/90 text-base leading-relaxed max-w-2xl text-left">
+        <Paragraph className={`${textColor}/90 text-base leading-relaxed max-w-2xl text-left`}>
           {text}
         </Paragraph>
 
