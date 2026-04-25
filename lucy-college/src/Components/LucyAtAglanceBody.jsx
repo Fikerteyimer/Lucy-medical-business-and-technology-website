@@ -3,7 +3,7 @@ import logo from "../assets/logo.jpg";
 import Paragraph from "./Paragraph";
 function LucyAtAglanceBody() {
   return (
-    <div className="px-6 md:px-16 mt-10 space-y-6">
+    <div className="px-6 md:px-20 mt-10 space-y-6">
       
       <div className="flex items-start gap-6 my-6">
         
