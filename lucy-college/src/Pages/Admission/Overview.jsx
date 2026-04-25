@@ -7,7 +7,11 @@ function Overview(){
     return(
         <div>
             <Navbar/>
-            <AboutHero background={development} />
+            <AboutHero 
+              background={development} 
+              children="Overview" 
+              title="Start Your Journey at Lucy College"
+              text="Discover admission requirements, programs, and how to apply." />
             <Newsletter/>
             <Footer/>
             
