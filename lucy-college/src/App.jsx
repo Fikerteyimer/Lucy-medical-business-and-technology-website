@@ -12,6 +12,7 @@ import CourseDetails from './Components/CourseDetails'
 import LucyAtAGlance from './Pages/About/LucyAtAGlance'
 import VisionMission from './Pages/About/VisionMission';
 import Overview from './Pages/Admission/OverView';
+import Calender from './Pages/Admission/Calender'
 
 
 
@@ -25,6 +26,7 @@ function App() {
       <Route path="/LucyAtAGlance" element={<LucyAtAGlance/>}></Route>
       <Route path="/VisionMission" element={<VisionMission/>}/>
       <Route path="/Overview" element={<Overview/>}/>
+      <Route path="/calender" element={<Calender/>}/>
       <Route path ="/courses" element={<Programs/>}></Route>
       <Route path="/courses/:school" element={<CourseDetails />} />
       <Route path ="/news" element={<NewsAndEvents/>}></Route>
