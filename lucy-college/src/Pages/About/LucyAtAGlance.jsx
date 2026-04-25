@@ -18,6 +18,7 @@ function LucyAtAGlance() {
         children="Lucy-at-a-glance"
         title="About Lucy College"
         text="Explore the background of Lucy College, its academic programs, and the schools under one of the leading institutions focused on health, business, and technology education in Ethiopia."
+        height="70vh"
       />
 
       <LucyAtAglanceBody
