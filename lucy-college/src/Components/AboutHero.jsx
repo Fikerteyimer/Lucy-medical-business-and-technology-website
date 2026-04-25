@@ -3,24 +3,24 @@ import Paragraph from "./Paragraph";
 import Dessie from "../assets/Dessie.jpg";
 import Horizontal from "./horizontal";
 
-function AboutHero({background,smtext,heading,text}) {
+function AboutHero() {
   return (
     <div
-      className="relative mt-10 min-h-[70vh] flex items-center bg-cover bg-center px-6 md:px-20"
-      style={{ backgroundImage: `url(${background})` }}
+      className="relative mt-20 min-h-[55vh] flex items-center bg-cover bg-center px-6 md:px-16"
+      style={{ backgroundImage: `url(${Dessie})` }}
     >
-      <div className="absolute inset-0 bg-blue-900/80"></div>
+      <div className="absolute inset-0 bg-blue-950/80"></div>
       <div className="relative z-10 text-white max-w-3xl w-full">
         <Paragraph className="text-white text-sm tracking-widest uppercase mb-2 text-left">
-          {smtext}
+          Lucy-at-a-glance
         </Paragraph>
         <Heading
-          title={heading}
+          title="About Us"
           className="text-white text-4xl md:text-5xl font-bold mb-4 text-left"
         />
         
         <Paragraph className="text-white/90 text-base leading-relaxed max-w-2xl text-left">
-          {text}
+          Explore the background of Lucy College, its academic programs, and the schools under one of the leading institutions focused on health, business, and technology education in Ethiopia.
         </Paragraph>
 
       </div>

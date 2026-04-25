@@ -6,7 +6,7 @@ function Overview(){
     return(
         <div>
             <Navbar/>
-            <OverViewHeroz/>
+            <OverViewHero/>
             <Newsletter/>
             <Footer/>
             
