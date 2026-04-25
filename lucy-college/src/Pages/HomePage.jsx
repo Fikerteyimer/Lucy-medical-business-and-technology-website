@@ -49,7 +49,7 @@ function HomePage() {
           />
           <CampusLife/>
          
-          <Campus />
+          
           <NewLetter />
           <Footer /> 
         </div>

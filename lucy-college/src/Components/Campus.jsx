@@ -26,27 +26,31 @@ function Campus() {
         {campuses.map((campus, index) => (
           <div
             key={index}
-            className="group relative overflow-hidden rounded-3xl shadow-lg hover:shadow-2xl transition duration-500"
+            className="relative group overflow-hidden rounded-3xl shadow-md hover:shadow-2xl transition duration-500"
           >
 
+            {/* Image */}
             <img
               src={campus.image}
               alt={campus.location}
-              className="w-full h-80 object-cover group-hover:scale-110 transition duration-700"
+              className="w-full h-80 object-cover group-hover:scale-105 transition duration-700"
             />
-            
-            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-500"></div>
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-center opacity-0 group-hover:opacity-100 transition duration-500">
 
-              <h3 className="text-white text-3xl md:text-4xl font-bold tracking-wide">
+            {/* Soft gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+
+            {/* Always visible text */}
+            <div className="absolute bottom-6 left-6 text-white">
+              <h3 className="text-2xl md:text-3xl font-bold">
                 {campus.location}
               </h3>
-
-              <p className="text-gray-200 text-sm mt-2">
+              <p className="text-sm text-white/80 mt-1">
                 Modern learning environment & facilities
-              </p> 
-
+              </p>
             </div>
+
+            {/* Hover highlight effect */}
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-blue-900/10 transition duration-500"></div>
 
           </div>
         ))}
