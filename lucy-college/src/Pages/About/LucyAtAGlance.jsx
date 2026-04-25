@@ -3,11 +3,12 @@ import NavBar from "../../Components/NavBar";
 import NewsLetter from "../../Components/NewsLetter";
 import LucyAtAglanceBody from"../../Components/LucyAtAglanceBody";
 import Footer from "../../Components/Footer";
+import Dessie from '../../assets/Dessie.jpg';
 function LucyAtAGlance(){
     return(
-        <div>z
+        <div>
             <NavBar/>
-            <AboutHero/>
+            <AboutHero background={Dessie} />
             <LucyAtAglanceBody/>
             <NewsLetter/>
             <Footer/>

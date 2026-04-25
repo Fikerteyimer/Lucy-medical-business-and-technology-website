@@ -1,12 +1,13 @@
 import Navbar from '../../Components/NavBar';
-import OverViewHero from '../../Components/OverViewHero';
 import Newsletter from '../../Components/NewsLetter';
 import Footer from '../../Components/Footer';
+import AboutHero from '../../Components/AboutHero';
+import Dessie from '../../assets/Dessie.jpg';
 function Overview(){
     return(
         <div>
             <Navbar/>
-            <OverViewHero/>
+            <AboutHero background={Dessie} />
             <Newsletter/>
             <Footer/>
             
