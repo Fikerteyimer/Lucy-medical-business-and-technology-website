@@ -1,14 +1,17 @@
-import NavBar from "../../Components/NavBar";
-import NewsLetter from '../../Components/NewsLetter';
+import Navbar from '../../Components/NavBar';
+import OverViewHero from '../../Components/OverViewHero';
+import Newsletter from '../../Components/NewsLetter';
 import Footer from '../../Components/Footer';
-export default function OverView(){
+function Overview(){
     return(
         <div>
-            <NavBar/>
-            <NewsLetter/>
+            <Navbar/>
+            <OverViewHeroz/>
+            <Newsletter/>
             <Footer/>
+            
         </div>
-    )
-    
+    );
 
 }
+export default Overview;

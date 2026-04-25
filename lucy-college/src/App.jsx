@@ -6,7 +6,6 @@ import NavBar from './Components/NavBar'
 import HomePage from './Pages/HomePage'
 
 import Programs from './Pages/Programs'
-import Admission from './Pages/Admission'
 import NewsAndEvents from './Pages/NewsAndEvents'
 import CampusLife from './Pages/CampusLife'
 import ContactUs from './Pages/ContactUs'
@@ -30,7 +29,6 @@ function App() {
       <Route path="/Overview" element={<Overview/>}/>
       <Route path ="/courses" element={<Programs/>}></Route>
       <Route path="/courses/:school" element={<CourseDetails />} />
-      <Route path ="/admission" element={<Admission/>}></Route>
       <Route path ="/news" element={<NewsAndEvents/>}></Route>
       <Route path ="/campus" element={<CampusLife/>}></Route>
       <Route path ="/contact" element={<ContactUs/>}></Route>
