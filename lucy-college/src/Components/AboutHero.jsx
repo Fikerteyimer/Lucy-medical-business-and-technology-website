@@ -6,7 +6,7 @@ import Horizontal from "./horizontal";
 function AboutHero() {
   return (
     <div
-      className="relative mt-20 min-h-[55vh] flex items-center bg-cover bg-center px-6 md:px-16"
+      className="relative  min-h-[55vh] flex items-center bg-cover bg-center px-6 md:px-16"
       style={{ backgroundImage: `url(${Dessie})` }}
     >
       <div className="absolute inset-0 bg-blue-950/80"></div>
