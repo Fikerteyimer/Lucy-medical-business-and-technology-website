@@ -11,7 +11,7 @@ function Overview(){
             <AboutHero 
               background={development} 
               children="Overview" 
-              title="Start Your Journey at Lucy College"
+              title="Admission"
               text="Discover admission requirements, programs, and how to apply."
               overlay="bg-blue-900/70"/>
               <AdmissionBody/>
