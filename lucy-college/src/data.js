@@ -295,14 +295,240 @@ export const links = [
         "Applicants must submit all required documents such as transcripts, identification, and any program-specific requirements before the deadline."
     }
   ];
-export const cases=[
+export const cases = [
   {
-    link:"Academic calender",
-    description:"An academic calendar refers to a structured schedule that lists all academic activities in chronological order for a single academic year. At the University, a normal semester consists of 16 weeks of classes followed by one week of break before examinations, while a summer or Kiremt semester usually runs for 8 to 12 weeks. The regular academic year begins in September and ends in June. Summer semesters begin on July 1 and end on September 7, during which students take a reduced course load compared to a normal semester. The duration of modular course offerings depends on the ECTS or credit value assigned to each course, while special programs may have flexible semester lengths based on their specific academic needs. Each year, the academic calendar is prepared by the College Registrar in consultation with the relevant academic administration and is approved by the Senate. The calendar also includes important academic activities such as registration periods, readmission, add and drop schedules, examination periods, and a minimum four-week inter-semester break to support academic planning and preparation."
+    link: "Academic Calendar",
+    content: [
+      {
+        type: "text",
+        value:
+          "An academic calendar refers to a structured schedule that lists all academic activities in chronological order for a single academic year."
+      },
+      {
+        type: "text",
+        value:
+          "Without prejudice to different program structures, a normal semester at the University consists of 16 weeks of classes followed by one week of break before examinations. Some programs may also include summer or modular course offerings depending on academic needs."
+      },
+      {
+        type: "list",
+        items: [
+          "Registration periods",
+          "Add and drop schedules",
+          "Examination periods",
+          "Semester breaks",
+          "Readmission schedules",
+          "Academic deadlines and events"
+        ]
+      },
+      {
+        type: "text",
+        value:
+          "The academic calendar is prepared by the College Registrar Office in consultation with academic units and is approved by the University Senate."
+      }
+    ]
   },
-  {
-    link:"reg",
-    description:""
-  }
 
-]
+  {
+    link: "Registration",
+    content: [
+      {
+        type: "text",
+        value:
+          "Registration is the official process through which students enroll in modules or courses for a semester and activate their academic status."
+      },
+      {
+        type: "list",
+        items: [
+          "Submission of required academic and personal documents",
+          "Completion of online or physical registration procedures",
+          "Payment of tuition or required fees",
+          "Selection of courses based on program structure",
+          "Final confirmation of registration at the registrar office"
+        ]
+      },
+      {
+        type: "text",
+        value:
+          "Students who fail to complete registration within the specified period may face academic consequences or restrictions from accessing university services."
+      }
+    ]
+  },
+
+  {
+    link: "Assessments and Examinations",
+    content: [
+      {
+        type: "text",
+        value:
+          "Student learning is assessed using a combination of continuous assessment and final examinations to ensure fair, consistent, and comprehensive evaluation of academic performance."
+      },
+      {
+        type: "list",
+        items: [
+          "Continuous assessments such as quizzes, tests, assignments, and presentations",
+          "Midterm examinations conducted during the semester",
+          "Final examinations (written, oral, or practical depending on the course)",
+          "Laboratory and practical assessments where applicable"
+        ]
+      },
+      {
+        type: "text",
+        value:
+          "The final grade is determined by combining continuous assessment results and final examination results, where the final examination shall not carry more than 50% of the total weight."
+      },
+      {
+        type: "text",
+        value:
+          "Examinations may be written, oral, or practical depending on the nature of the module or course. In cases of oral examinations, instructors must maintain written records of student performance and grading justification."
+      },
+      {
+        type: "list",
+        items: [
+          "Students must follow all examination rules strictly",
+          "Violation of examination rules leads to disciplinary action",
+          "Make-up examinations are allowed only under valid medical or emergency conditions",
+          "Students must sign attendance sheets before leaving the examination hall"
+        ]
+      }
+    ]
+  },
+
+  {
+    link: "Grading System",
+    content: [
+      {
+        type: "text",
+        value:
+          "The University uses a standardized grading system based on letter grades and grade points."
+      },
+      {
+        type: "table",
+        headers: ["Raw Mark", "Grade Point", "Letter Grade", "Status Description"],
+        rows: [
+          ["90–100", "4.00", "A+", "Excellent"],
+          ["85–89", "4.00", "A", "Excellent"],
+          ["80–84", "3.75", "A-", "Very Good"],
+          ["75–79", "3.50", "B+", "Very Good"],
+          ["68–74", "3.00", "B", "Good"],
+          ["65–67", "2.75", "B-", "Good"],
+          ["60–64", "2.50", "C+", "Satisfactory"],
+          ["50–59", "2.00", "C", "Satisfactory"],
+          ["45–49", "1.75", "C-", "Low Performance"],
+          ["40–44", "1.00", "D", "Very Poor"],
+          ["Below 40", "0.00", "F", "Fail"]
+        ]
+      }
+    ]
+  },
+
+  {
+    link: "Discontinuing Study",
+    content: [
+      {
+        type: "text",
+        value:
+          "A student may be required to discontinue studies due to academic, disciplinary, or personal reasons for at least one semester."
+      },
+      {
+        type: "text",
+        value:
+          "Discontinuation may occur under dismissal, dropout, or formal withdrawal conditions depending on the student’s academic status."
+      },
+
+      {
+        type: "list",
+        items: [
+          "Dismissal due to academic failure or poor performance",
+          "Voluntary dropout after consultation with academic advisors",
+          "Formal withdrawal through official university procedures",
+          "Eligibility for readmission depends on proper clearance and approval"
+        ]
+      },
+
+      {
+        type: "text",
+        value:
+          "Students who are dismissed must formally withdraw from the university and may be considered for readmission based on institutional rules."
+      },
+
+      {
+        type: "text",
+        value:
+          "Dropout cases require consultation with academic advisors, and unjustified dropout may lead to denial of future readmission."
+      },
+
+      {
+        type: "text",
+        value:
+          "Withdrawal must be completed within the official time frame (usually within 8 weeks after the start of the semester) using the proper withdrawal forms."
+      },
+
+      {
+        type: "text",
+        value:
+          "Clearance is mandatory for all students who discontinue studies, graduate, or complete an academic year. No academic documents will be issued without proper clearance."
+      }
+    ]
+  },
+
+  {
+    link: "Graduation",
+    content: [
+      {
+        type: "text",
+        value:
+          "Students must fulfill all academic requirements to qualify for graduation from their program."
+      },
+
+      {
+        type: "list",
+        items: [
+          "Minimum CGPA of 2.00 for undergraduate programs",
+          "Completion of all required ECTS/credit hours",
+          "No failed mandatory courses or modules",
+          "Satisfactory completion of program requirements",
+          "Possible exit examination requirement depending on program"
+        ]
+      },
+
+      {
+        type: "text",
+        value:
+          "Graduate students must fulfill coursework, thesis, or dissertation requirements depending on their program type."
+      },
+
+      {
+        type: "text",
+        value:
+          "A student is recommended for graduation only after all academic, administrative, and research requirements are successfully completed."
+      }
+    ]
+  },
+
+  {
+    link: "Waiver of Rules",
+    content: [
+      {
+        type: "text",
+        value:
+          "Minor academic regulations may be waived under exceptional circumstances through formal institutional procedures."
+      },
+
+      {
+        type: "list",
+        items: [
+          "Cases are first reviewed by the Department Academic Committee",
+          "Recommendations are forwarded to the College Academic Commission",
+          "Final approval is given by the ASCRC (Academic Standards and Curriculum Review Committee)",
+          "Direct student petitions to ASCRC are not accepted"
+        ]
+      },
+
+      {
+        type: "text",
+        value:
+          "The decision of the ASCRC is final and binding for all waiver requests."
+      }
+    ]
+  }
+];
