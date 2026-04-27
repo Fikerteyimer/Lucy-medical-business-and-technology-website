@@ -3,12 +3,13 @@ import Footer from "../../Components/Footer";
 import LinksHero from "../../Components/LinksHero";
 import NavBar from "../../Components/NavBar";
 import NewsLetter from '../../Components/NewsLetter';
+import { links } from "../../data";
 function Admission(){
     return(
         <div>
             <NavBar />
             <AboutHero children="Academic Cases" title="Admission"/>
-            <LinksHero/>
+            <LinksHero links={links} />
             <NewsLetter/>
             <Footer/>
            

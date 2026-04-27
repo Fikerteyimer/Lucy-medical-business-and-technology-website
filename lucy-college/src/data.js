@@ -295,3 +295,10 @@ export const links = [
         "Applicants must submit all required documents such as transcripts, identification, and any program-specific requirements before the deadline."
     }
   ];
+export const cases=[
+  {
+    link:"Academic calender",
+    description:"An academic calendar refers to a structured schedule that lists all academic activities in chronological order for a single academic year. At the University, a normal semester consists of 16 weeks of classes followed by one week of break before examinations, while a summer or Kiremt semester usually runs for 8 to 12 weeks. The regular academic year begins in September and ends in June. Summer semesters begin on July 1 and end on September 7, during which students take a reduced course load compared to a normal semester. The duration of modular course offerings depends on the ECTS or credit value assigned to each course, while special programs may have flexible semester lengths based on their specific academic needs. Each year, the academic calendar is prepared by the College Registrar in consultation with the relevant academic administration and is approved by the Senate. The calendar also includes important academic activities such as registration periods, readmission, add and drop schedules, examination periods, and a minimum four-week inter-semester break to support academic planning and preparation."
+  }
+
+]

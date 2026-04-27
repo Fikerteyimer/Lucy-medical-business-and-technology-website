@@ -3,7 +3,7 @@ import Footer from "../../Components/Footer";
 import LinksHero from "../../Components/LinksHero";
 import NavBar from "../../Components/NavBar";
 import NewsLetter from "../../Components/NewsLetter";
-import { links } from "../../data";
+import { cases } from "../../data";
 
 function AcademicCases() {
   return (
@@ -15,8 +15,9 @@ function AcademicCases() {
         title="Academic Cases"
         text="Explore academic policies and student information at Lucy College."
       />
+      <LinksHero links={cases}/>
 
-      <LinksHero links={links} />
+      
 
       <NewsLetter />
       <Footer />
