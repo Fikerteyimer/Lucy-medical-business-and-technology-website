@@ -14,11 +14,9 @@ function AcademicCases() {
         children="Academic Cases"
         title="Academic Cases"
         text="Explore academic policies and student information at Lucy College."
+       
       />
       <LinksHero links={cases}/>
-
-      
-
       <NewsLetter />
       <Footer />
     </div>

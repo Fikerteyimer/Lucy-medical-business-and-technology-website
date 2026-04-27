@@ -13,23 +13,17 @@ function LucyAtAGlance() {
     <div>
       <NavBar />
 
-      <AboutHero
-        background={Dessie}
-        children="Lucy-at-a-glance"
-        title="About Lucy College"
-        text="Explore the background of Lucy College, its academic programs, and the schools under one of the leading institutions focused on health, business, and technology education in Ethiopia."
-       
-        overlay="bg-blue-900/70"
-      />
+      
 
       <LucyAtAglanceBody
         logo={logo}
         title="Lucy College"
         quote="Knowledge, Innovation, Excellence"
+        className="mt-40"
         
       >
         <Paragraph>
-          Lucy College at a Glance offers a concise overview of one of Ethiopia’s growing
+          Lucy College offers a concise overview of one of Ethiopia’s growing
           centers of academic excellence, innovation, and professional development.
           Located in Dessie, the college is dedicated to producing skilled, competent,
           and ethically responsible graduates who are ready to contribute to the nation’s

@@ -6,7 +6,8 @@ function AdmissionBody() {
     <div>
       <LucyAtAglanceBody 
         title="Overview"
-        showHorizontal={true}>
+        showHorizontal={true}
+        className="mt-30">
 
         <Paragraph>
           The Office of the College Registrar is responsible for overseeing all operational matters

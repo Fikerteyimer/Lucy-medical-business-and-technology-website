@@ -8,7 +8,7 @@ function Admission(){
     return(
         <div>
             <NavBar />
-            <AboutHero children="Academic Cases" title="Admission"/>
+            <AboutHero children="Academic Cases" title="Admission" />
             <LinksHero links={links} />
             <NewsLetter/>
             <Footer/>
