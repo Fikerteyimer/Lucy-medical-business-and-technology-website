@@ -1,16 +1,19 @@
 import { useState } from "react";
+import Paragraph from '../Components/Paragraph'
+import Subheading from '../Components/Subheading';
+import Horizontal from '../Components/Horizontal';
 
 function LinksHero() {
   const links = [
     {
       link: "Overview",
       description:
-        "The admission requirements vary greatly depending on the programs. Because the non-regular programs should adhere to the same standards of quality as the regular programs of the University, non-regular program applicants shall be considered against the same criteria as regular program applicants. Moreover, non-regular program applicants shall be admitted through the same admissions process."
+        " The admission requirements vary across different programs due to differences in academic disciplines, skill expectations, and preparatory needs, with each program setting specific criteria to ensure applicants are well-prepared for their chosen field of study. However, the University maintains a consistent standard of academic quality across all programs, meaning that applicants to non-regular programs are evaluated using the same criteria as those applying to regular programs to ensure fairness and academic integrity. In addition, all applicants follow the same admissions process, which includes submission of applications, review of academic records, verification of supporting documents, and final selection based on institutional standards, ensuring transparency, equality, and equal opportunity for all students regardless of program type."
     },
     {
-      link: "Admission Process",
+      link: "Id Card",
       description:
-        "Applicants must follow the official admission steps which include application submission, document verification, and final approval by the admissions office."
+        "A student registering at the University is issued a non-transferable identification card with a unique and permanent registration number. The card, which is a very valuable document and which requires careful handling, is a means to access services and facilities in the University. The registration number, often called identification number, which should appear on all student documents, is required every time the student requests for any University services. Identification cards are issued to all new students free of charge. It should be renewed each regular, evening or Kiremt semester, and returned to the Registrar Office when the student discontinuous his/her studies or graduates. Issuance of ID cards needs one recently taken passport size photograph of the student with his/her name, father’s and grandfather’s names clearly written on the back of the photograph in English."
     },
     {
       link: "Requirements",
@@ -23,8 +26,6 @@ function LinksHero() {
 
   return (
     <div className="bg-white w-full">
-      
-      {/* FULL WIDTH LINKS BAR */}
       <div className="w-full bg-gray-100 border-b border-gray-300">
         <div className="flex justify-center gap-10 py-6">
           {links.map((item, index) => (
@@ -43,14 +44,18 @@ function LinksHero() {
         </div>
       </div>
 
-      {/* CONTENT */}
+    
       <div className="px-6 md:px-20 py-10">
-        <h2 className="text-2xl font-semibold text-blue-900 mb-3">
-          {links[activeIndex].link}
-        </h2>
-        <p className="text-gray-700 leading-relaxed">
+        <Subheading 
+          text={links[activeIndex].link}
+          className="text-left font-semibold"
+        />
+        <Horizontal className="border-red-500 mx-0 mb-8 mt-0"/>
+          
+       
+        <Paragraph>
           {links[activeIndex].description}
-        </p>
+        </Paragraph>
       </div>
     </div>
   );
