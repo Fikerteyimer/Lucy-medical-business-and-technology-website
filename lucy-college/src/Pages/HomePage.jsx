@@ -34,7 +34,7 @@ function HomePage() {
                   to prepare graduates for successful careers and societal contribution."
           />
           <Counter />
-          <LatestNews/>
+         
           
           <CardGrid
             title="Our Popular Courses"
@@ -47,7 +47,7 @@ function HomePage() {
               />
             }
           />
-          <CampusLife/>
+         <LatestNews/>
          
           
           <NewLetter />
