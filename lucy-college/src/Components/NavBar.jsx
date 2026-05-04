@@ -13,89 +13,100 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
-      <div className="flex justify-between items-center px-6 py-2">
+    <nav className="fixed top-0 left-0 w-full bg-white shadow-sm z-50">
+
+      {/* TOP BAR */}
+      <div className="flex justify-between items-center px-4 py-2">
 
         {/* LOGO */}
         <div className="flex items-center gap-3">
-          <img src={logo} className="w-12 h-12 rounded-full object-cover" />
+          <img src={logo} className="w-11 h-11 rounded-full object-cover" />
           <h1 className="text-blue-900 text-xl font-bold">
             Lucy <span className="text-blue-500">College</span>
           </h1>
         </div>
 
-        {/* ================= DESKTOP MENU ================= */}
+        {/* DESKTOP MENU */}
         <ul className="hidden md:flex items-center gap-8">
 
-          {navLinks.map((nav, index) => (
-            <li key={index} className="relative group">
+          {navLinks.map((nav, index) => {
 
-              {/* MAIN LINK */}
-              <NavLink
-                to={nav.path}
-                className="text-blue-900 hover:text-blue-600 flex items-center gap-1 py-4"
-              >
-                {nav.name}
+            const count = nav.submenu?.length || 0;
+
+            // ✅ dynamic width
+            const widthClass =
+              count <= 1 ? "w-[260px]" :
+              count === 2 ? "w-[420px]" :
+              "w-[520px]";
+
+            const gridCols = count <= 1 ? "grid-cols-1" : "grid-cols-2";
+
+            return (
+              <li key={index} className="relative group">
+
+                <NavLink
+                  to={nav.path}
+                  className="text-blue-900 hover:text-blue-600 flex items-center gap-1 py-4"
+                >
+                  {nav.name}
+                  {nav.submenu && (
+                    <span className="text-xs group-hover:rotate-180 transition">
+                      ▼
+                    </span>
+                  )}
+                </NavLink>
+
+                {/* MEGA MENU */}
                 {nav.submenu && (
-                  <span className="text-xs group-hover:rotate-180 transition">
-                    ▼
-                  </span>
-                )}
-              </NavLink>
+                  <div
+                    className={`
+                      absolute left-1/2 -translate-x-1/2 top-full
+                      ${widthClass}
+                      max-h-[420px] overflow-y-auto
+                      bg-white shadow-2xl rounded-2xl p-5
+                      opacity-0 invisible pointer-events-none
+                      group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto
+                      transition-all duration-200
+                    `}
+                  >
 
-              {/* ================= HOVER MEGA MENU (FIXED STABLE VERSION) ================= */}
-              {nav.submenu && (
-                <div className="
-                  absolute left-1/2 -translate-x-1/2 top-full
-                  mt-0 pt-3
-                  w-[540px] bg-white shadow-2xl rounded-2xl p-6
-                  opacity-0 invisible pointer-events-none
-                  group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto
-                  transition-all duration-200
-                ">
+                    <div className={`grid ${gridCols} gap-4`}>
 
-                  <div className="grid grid-cols-2 gap-4">
+                      {nav.submenu.map((submenu, i) => (
+                        <div
+                          key={i}
+                          className="bg-gray-50 hover:bg-blue-50 rounded-xl p-4 transition"
+                        >
 
-                    {nav.submenu.map((submenu, i) => (
-                      <div
-                        key={i}
-                        className="bg-gray-50 hover:bg-blue-50 rounded-xl p-4 transition"
-                      >
+                          <h3 className="text-blue-800 font-semibold mb-3 border-b pb-2">
+                            {submenu.title}
+                          </h3>
 
-                        {/* TITLE */}
-                        <h3 className="text-blue-800 font-semibold mb-3 border-b pb-2">
-                          {submenu.title}
-                        </h3>
+                          <div className="space-y-2">
 
-                        {/* ITEMS */}
-                        <div className="space-y-2">
+                            {submenu.items.map((item, j) => (
+                              <NavLink
+                                key={j}
+                                to={item.path}
+                                className="flex items-center gap-2 text-sm text-gray-700 hover:text-blue-600 transition py-1"
+                              >
+                                <span className="w-1.5 h-1.5 bg-blue-500 rounded-full"></span>
+                                {item.name}
+                              </NavLink>
+                            ))}
 
-                          {submenu.items.map((item, j) => (
-                            <NavLink
-                              key={j}
-                              to={item.path}
-                              className="
-                                flex items-center gap-2 text-sm text-gray-700
-                                hover:text-blue-600 hover:translate-x-1 transition py-1
-                              "
-                            >
-                              <span className="w-1.5 h-1.5 bg-blue-500 rounded-full"></span>
-                              {item.name}
-                            </NavLink>
-                          ))}
+                          </div>
 
                         </div>
+                      ))}
 
-                      </div>
-                    ))}
-
+                    </div>
                   </div>
+                )}
 
-                </div>
-              )}
-
-            </li>
-          ))}
+              </li>
+            );
+          })}
 
           {/* LOGIN */}
           <NavLink to="/login">
@@ -104,33 +115,32 @@ const NavBar = () => {
 
         </ul>
 
-        {/* ================= MOBILE HAMBURGER ================= */}
+        {/* MOBILE */}
         <button
           onClick={() => setMenuOpen(true)}
           className="md:hidden text-blue-900 text-3xl"
         >
           ☰
         </button>
-
       </div>
 
-      {/* ================= MOBILE OVERLAY ================= */}
+      {/* OVERLAY */}
       <div
-        className={`fixed inset-0 bg-black/40 backdrop-blur-sm transition-opacity duration-150 ${
+        className={`fixed inset-0 bg-black/40 transition ${
           menuOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
         onClick={() => setMenuOpen(false)}
-      ></div>
+      />
 
-      {/* ================= MOBILE SIDEBAR ================= */}
+      {/* MOBILE MENU */}
       <div
-        className={`fixed top-0 left-0 h-full w-[290px] bg-white shadow-2xl z-50 transform transition-transform duration-200
-        ${menuOpen ? "translate-x-0" : "-translate-x-full"}`}
+        className={`fixed top-0 left-0 h-full w-[300px] bg-white shadow-xl z-50 transform transition ${
+          menuOpen ? "translate-x-0" : "-translate-x-full"
+        } overflow-y-auto`}
       >
 
         <div className="p-6">
 
-          {/* LOGO */}
           <div className="flex items-center gap-3 mb-8">
             <img src={logo} className="w-10 h-10 rounded-full" />
             <h1 className="text-blue-900 font-bold text-lg">
@@ -138,7 +148,6 @@ const NavBar = () => {
             </h1>
           </div>
 
-          {/* LINKS */}
           <div className="flex flex-col gap-4">
 
             {navLinks.map((nav, index) => (
@@ -157,7 +166,7 @@ const NavBar = () => {
                   {nav.submenu && (
                     <button
                       onClick={() => toggleSubmenu(index)}
-                      className="text-blue-900 text-sm"
+                      className="text-blue-900"
                     >
                       ▼
                     </button>
@@ -165,12 +174,11 @@ const NavBar = () => {
 
                 </div>
 
-                {/* MOBILE SUBMENU */}
                 {nav.submenu && openSubmenu === index && (
-                  <div className="mt-3 ml-2 space-y-3">
+                  <div className="mt-3 ml-2 space-y-3 max-h-60 overflow-y-auto">
 
                     {nav.submenu.map((submenu, i) => (
-                      <div key={i} className="bg-gray-50 rounded-xl p-3">
+                      <div key={i} className="bg-gray-50 p-3 rounded-xl">
 
                         <p className="text-blue-700 font-semibold text-sm mb-2">
                           {submenu.title}
@@ -183,7 +191,7 @@ const NavBar = () => {
                               key={j}
                               to={item.path}
                               onClick={() => setMenuOpen(false)}
-                              className="block text-sm text-gray-700 hover:text-blue-600 py-1"
+                              className="block text-sm text-gray-700 hover:text-blue-600"
                             >
                               • {item.name}
                             </NavLink>
@@ -202,7 +210,6 @@ const NavBar = () => {
 
           </div>
 
-          {/* LOGIN */}
           <div className="mt-6">
             <NavLink to="/login" onClick={() => setMenuOpen(false)}>
               <Button text="Portal Login" />
