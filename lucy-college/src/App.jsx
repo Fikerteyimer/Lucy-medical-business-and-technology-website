@@ -9,7 +9,7 @@ import CampusLife from './Pages/CampusLife'
 import ContactUs from './Pages/ContactUs'
 import Login from './Pages/Login'
 import CourseDetails from './Components/CourseDetails'
-import LucyAtAGlance from './Pages/About/LucyAtAGlance'
+
 import VisionMission from './Pages/About/VisionMission';
 import Overview from './Pages/Admission/OverView';
 import Calender from './Pages/Admission/Calender';
@@ -26,7 +26,7 @@ function App() {
     <>
     <Routes>
       <Route index  element={<HomePage/>}></Route>
-      <Route path="/LucyAtAGlance" element={<LucyAtAGlance/>}></Route>
+   
       <Route path="/VisionMission" element={<VisionMission/>}/>
       <Route path="/Overview" element={<Overview/>}/>
       <Route path="/calender" element={<Calender/>}/>

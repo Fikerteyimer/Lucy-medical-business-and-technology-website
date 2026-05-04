@@ -14,7 +14,9 @@ import CampusLife from "../Components/CampusLife";
 import LatestNews from "../Components/LatestNews";
 import Paragraph from "../Components/Paragraph";
 import Heading from "../Components/Heading";
-
+import About1 from '../assets/About1.jpg';
+import ContactInfo from '../Components/ContactInfo';
+import ContactSection from '../Components/ContactSection';
 
 function HomePage() {
     const navigate = useNavigate(); 
@@ -28,9 +30,19 @@ function HomePage() {
             <Paragraph children="At Lucy College, we offer a diverse range of programs designed to empower students with knowledge and practical skills for real-world success" className="text-center"/>
            <CardGrid data={whatweOffer} gap="gap-3"/>
           </div>
-          <AboutSection/>
+          <AboutSection 
+            image={About1} 
+            title="About Lucy" 
+            children="Our institution is committed to academic excellence, creativity, and practical learning. Students are encouraged to explore new ideas, participate in research, and engage in collaborative projects that prepare them for real-world challenges. With diverse programs, modern facilities, and a vibrant campus life, we strive to create an environment where every student can grow, discover their potential, and build a meaningful future."  
+            showButton={true}
+          />
          <LatestNews/>
-         <CampusLife/>
+        
+   
+    <ContactInfo />
+  
+
+          <CampusLife/>
          
           
           <NewLetter />

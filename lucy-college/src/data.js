@@ -173,18 +173,9 @@ export const navLinks = [
       {
         title: "Who we are",
         items: [
-          { name: "Lucy at a glance", path: "/LucyAtAGlance" },
+          
           {name:"about",path:"/about"},
-          { name: "Our history", path: "/history" },
           { name: "Our mission and vision", path: "/VisionMission" },
-          { name: "The shareholders", path: "/shareholders" }
-        ]
-      },
-      {
-        title: "Leadership and People",
-        items: [
-          { name: "President / Dean", path: "/president" },
-          { name: "Faculty & Staff", path: "/faculty" }
         ]
       },
       {

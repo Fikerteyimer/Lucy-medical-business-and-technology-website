@@ -1,59 +1,181 @@
 import { FiPhone, FiMail, FiClock } from "react-icons/fi";
+import Button from "./Button";
 import Paragraph from "./Paragraph";
 import Subheading from "./Subheading";
-import ContactCard from "./ContactCard";
 
-function ContactSection() {
-  const contacts = {
-    phones: [
-      { label: "Dessie Campus", numbers: ["0902552255", "0902552200", "0333112525", "0333116669"] },
-      { label: "Semera Campus", numbers: ["0902557755", "0902552255"] },
-    ],
-    emails: ["lucy@gmail.com"],
-    officeHours: {
-      days: "Monday – Friday",
-      time: "8:30 AM – 5:30 PM",
-    },
-  };
+/* =========================
+   CONTACT INFO FORM
+========================= */
+function ContactInfo() {
+  const fields = [
+    { placeholder: "First Name", type: "text" },
+    { placeholder: "Last Name", type: "text" },
+    { placeholder: "Email Address", type: "email" },
+    { placeholder: "Phone Number", type: "tel" },
+    { placeholder: "Subject", type: "text" },
+  ];
 
   return (
-    <section className="max-w-6xl mx-auto px-6 py-12">
-      <Subheading text="Get Connected"/>
-      <Paragraph className="text-center">
-        We're here to help! Reach out for admissions, programs, or general inquiries.
-      </Paragraph>
+    <div className="bg-white rounded-3xl shadow-xl p-10 space-y-6">
 
-      <div className="grid md:grid-cols-3 gap-6">
-        <ContactCard icon={FiClock} title="Office Hours">
-          <Paragraph>{contacts.officeHours.days}</Paragraph>
-          <Paragraph>{contacts.officeHours.time}</Paragraph>
-        </ContactCard>
+      <div>
+        <Subheading text="Send Us a Message" />
+        <Paragraph className="text-gray-500 mt-2">
+          We usually respond within 24 hours.
+        </Paragraph>
+      </div>
 
-        <ContactCard icon={FiMail} title="Email">
-          {contacts.emails.map((email, idx) => (
-            <a key={idx} href={`mailto:${email}`} className="text-gray-700 hover:text-blue-600 hover:underline block">
-              {email}
-            </a>
-          ))}
-        </ContactCard>
+      {/* INPUT FLOW (no form grid, just smooth vertical flow) */}
+      <div className="space-y-4">
+        {fields.map((f, i) => (
+          <input
+            key={i}
+            type={f.type}
+            placeholder={f.placeholder}
+            className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200
+            focus:outline-none focus:ring-2 focus:ring-indigo-400 transition"
+          />
+        ))}
 
-        <ContactCard icon={FiPhone} title="Call Us">
-          {contacts.phones.map((campus, idx) => (
-            <div key={idx} className="mb-3">
-              <p className="font-semibold text-gray-800">{campus.label}</p>
-              <div className="flex flex-wrap justify-center gap-2 mt-1">
-                {campus.numbers.map((num, id) => (
-                  <a key={id} href={`tel:+251${num}`} className="bg-red-100 text-red-700 rounded-full px-3 py-1 text-sm hover:bg-red-200 transition">
-                    {num}
-                  </a>
-                ))}
-              </div>
+        <textarea
+          rows="5"
+          placeholder="Write your message..."
+          className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200
+          focus:outline-none focus:ring-2 focus:ring-indigo-400 transition resize-none"
+        />
+      </div>
+
+      <Button
+        text="Send Message"
+        className="w-full py-3 rounded-xl bg-indigo-600 text-white font-semibold
+        hover:bg-indigo-700 transition shadow-md"
+      />
+    </div>
+  );
+}
+
+/* =========================
+   CONTACT DETAILS
+========================= */
+function ContactSection() {
+  const info = [
+    {
+      icon: FiClock,
+      title: "Office Hours",
+      lines: ["Monday – Friday", "8:30 AM – 5:30 PM"],
+    },
+    {
+      icon: FiMail,
+      title: "Email",
+      lines: ["lucy@gmail.com"],
+    },
+    {
+      icon: FiPhone,
+      title: "Call Us",
+      phones: {
+        "Dessie Campus": ["0902552255", "0902552200", "0333112525", "0333116669"],
+        "Semera Campus": ["0902557755", "0902552255"],
+      },
+    },
+  ];
+
+  return (
+    <div className="space-y-6">
+
+      <div className="mb-6">
+        <Subheading text="Get in Touch" />
+        <Paragraph className="text-gray-500 mt-2">
+          We’re here anytime you need help or information.
+        </Paragraph>
+      </div>
+
+      {info.map((block, i) => (
+        <div
+          key={i}
+          className="bg-white/80 backdrop-blur-md rounded-2xl shadow-md p-6
+          hover:shadow-lg transition space-y-3"
+        >
+
+          <div className="flex items-center gap-3 text-indigo-600 font-semibold">
+            <block.icon size={20} />
+            {block.title}
+          </div>
+
+          {/* TEXT BLOCKS */}
+          {block.lines && (
+            <div className="text-gray-600 space-y-1">
+              {block.lines.map((l, idx) => (
+                <Paragraph key={idx}>{l}</Paragraph>
+              ))}
             </div>
-          ))}
-        </ContactCard>
+          )}
+
+          {/* PHONE BLOCK */}
+          {block.phones && (
+            <div className="space-y-4">
+              {Object.entries(block.phones).map(([campus, nums], idx) => (
+                <div key={idx}>
+                  <p className="font-medium text-gray-800 mb-2">{campus}</p>
+
+                  <div className="flex flex-wrap gap-2">
+                    {nums.map((n, i) => (
+                      <a
+                        key={i}
+                        href={`tel:+251${n}`}
+                        className="text-sm px-3 py-1 rounded-full bg-indigo-50 text-indigo-700
+                        hover:bg-indigo-100 transition"
+                      >
+                        {n}
+                      </a>
+                    ))}
+                  </div>
+
+                </div>
+              ))}
+            </div>
+          )}
+
+        </div>
+      ))}
+    </div>
+  );
+}
+
+/* =========================
+   MAIN LAYOUT (NO GRID FEEL)
+========================= */
+export default function ContactPage() {
+  return (
+    <section className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50 py-16 px-6">
+
+      <div className="max-w-6xl mx-auto">
+
+        {/* HEADER */}
+        <div className="text-center mb-14">
+          <h1 className="text-4xl font-bold text-gray-800">
+            Contact Us
+          </h1>
+          <p className="text-gray-500 mt-3">
+            We’d love to hear from you — anytime, anywhere.
+          </p>
+        </div>
+
+        {/* MAIN FLEX LAYOUT (NOT GRID) */}
+        <div className="flex flex-col lg:flex-row gap-10">
+
+          {/* LEFT */}
+          <div className="flex-1">
+            <ContactInfo />
+          </div>
+
+          {/* RIGHT */}
+          <div className="flex-1">
+            <ContactSection />
+          </div>
+
+        </div>
+
       </div>
     </section>
   );
 }
-
-export default ContactSection;
