@@ -30,6 +30,7 @@ function HomePage() {
           </div>
           <AboutSection/>
          <LatestNews/>
+         <CampusLife/>
          
           
           <NewLetter />

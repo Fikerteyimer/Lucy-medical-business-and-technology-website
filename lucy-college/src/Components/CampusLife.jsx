@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Image1 from "../assets/Image1.jpg";
 import Image2 from "../assets/Image2.jpg";
 import Image3 from "../assets/Image3.jpg";
@@ -5,53 +6,95 @@ import Heading from "./Heading";
 import Paragraph from "./Paragraph";
 
 function CampusLife() {
-  const campusImages = [
-    Image1,
-    Image2,
-    Image3,
-    Image1,
-  ];
+  const images = [Image1, Image2, Image3, Image1];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev + 1) % images.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) =>
+      prev === 0 ? images.length - 1 : prev - 1
+    );
+  };
+
+  const goToSlide = (index) => {
+    setCurrentIndex(index);
+  };
 
   return (
-    <section className="py-24 px-6 md:px-20 bg-gradient-to-b from-white to-gray-50">
+    <section className="w-full">
 
-      <Heading title="Campus Life" />
+      {/* TEXT PART */}
+      <div className="text-center py-16 px-6">
+        <Heading title="Campus Life" />
 
-      <Paragraph>
-        Experience a vibrant campus environment that supports learning,
-        collaboration, innovation, and student growth in a modern academic setting.
-      </Paragraph>
+        <Paragraph className="max-w-2xl mx-auto mt-4 text-center">
+          Experience a vibrant campus environment that supports learning,
+          collaboration, innovation, and student growth in a modern academic setting.
+        </Paragraph>
+      </div>
 
-     
-      <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {/* SLIDER (FULL WIDTH) */}
+      <div className="w-full h-screen relative overflow-hidden">
 
-        {campusImages.map((img, index) => (
-          <div
-            key={index}
-            className="group relative overflow-hidden rounded-2xl shadow-md hover:shadow-2xl transition duration-500"
-          >
-            
-           
+        {/* SLIDES */}
+        <div
+          className="flex h-full transition-transform duration-700 ease-in-out"
+          style={{
+            transform: `translateX(-${currentIndex * 100}%)`,
+          }}
+        >
+          {images.map((img, index) => (
             <img
+              key={index}
               src={img}
-              alt={`Campus life ${index + 1}`}
-              className="w-full h-72 object-cover group-hover:scale-110 transition duration-700"
+              alt={`slide-${index}`}
+              className="w-full h-full object-cover flex-shrink-0"
             />
+          ))}
+        </div>
 
-            <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition duration-500"></div>
-            <div className="absolute bottom-0 left-0 p-5 translate-y-6 group-hover:translate-y-0 transition duration-500 opacity-0 group-hover:opacity-100">
-              <h3 className="text-white text-lg font-semibold">
-                Campus Life {index + 1}
-              </h3>
-              <p className="text-white text-sm opacity-80">
-                Student environment & activities
-              </p>
-            </div>
+        {/* LEFT BUTTON */}
+        <button
+          onClick={prevSlide}
+          className="absolute top-1/2 left-4 -translate-y-1/2 
+          bg-black/40 text-white px-4 py-2 rounded-full 
+          hover:bg-black/70 transition"
+        >
+          ◀
+        </button>
 
-          </div>
-        ))}
+        {/* RIGHT BUTTON */}
+        <button
+          onClick={nextSlide}
+          className="absolute top-1/2 right-4 -translate-y-1/2 
+          bg-black/40 text-white px-4 py-2 rounded-full 
+          hover:bg-black/70 transition"
+        >
+          ▶
+        </button>
+
+        {/* DOT INDICATORS */}
+        <div className="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-3">
+          {images.map((_, index) => (
+            <div
+              key={index}
+              onClick={() => goToSlide(index)}
+              className={`w-3 h-3 rounded-full cursor-pointer transition-all duration-300
+                ${
+                  currentIndex === index
+                    ? "bg-white scale-125"
+                    : "bg-white/50"
+                }`}
+            ></div>
+          ))}
+        </div>
 
       </div>
+
     </section>
   );
 }
