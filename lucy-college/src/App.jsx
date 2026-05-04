@@ -15,6 +15,7 @@ import Overview from './Pages/Admission/OverView';
 import Calender from './Pages/Admission/Calender';
 import AcademicCases from './Pages/Admission/AcademicCases'
 import Admission from './Pages/Admission/Admission'
+import About from './Pages/About/About';
 
 
 
@@ -29,6 +30,7 @@ function App() {
       <Route path="/VisionMission" element={<VisionMission/>}/>
       <Route path="/Overview" element={<Overview/>}/>
       <Route path="/calender" element={<Calender/>}/>
+      <Route path="/about" element={<About/>}/>
       <Route path="academic-cases" element={<AcademicCases/>}/>
       <Route path="/admission" element={<Admission/>}/>
       <Route path ="/courses" element={<Programs/>}></Route>

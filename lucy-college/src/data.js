@@ -174,6 +174,7 @@ export const navLinks = [
         title: "Who we are",
         items: [
           { name: "Lucy at a glance", path: "/LucyAtAGlance" },
+          {name:"about",path:"/about"},
           { name: "Our history", path: "/history" },
           { name: "Our mission and vision", path: "/VisionMission" },
           { name: "The shareholders", path: "/shareholders" }
