@@ -162,60 +162,82 @@ export const courses = [
     ]
   }
 ];
-
 export const navLinks = [
-    { name: "Home", path: "/" },
-    { name: "About",
-      submenu:[
-        {
-          title:"Who we are",
-          items:[
-          {name:"Lucy at a glance",path:"/LucyAtAGlance"},
-          {name:"Our history",path:"/history"},
-          {name:"Our mission and vision", path:"/VisionMission"},
-          {name:"The shareholders", path:"/shareholders"},
-        ]
-        },
-        {
-          title:"LeaderShip and People",
-          items:[
-          {name:"President / Dean",path:"/president "},
-          {name:"Faculty & Staff",path:"/faculty"},
-         
-          ]    
-        },
-        
-         {
-          title:"ACCREDITATION & RECOGNITION",
-          items:[
-          {name:"Certifications",path:"/Certifications "},
-          {name:"Government Approval",path:"/faculty"},
-          {name:"Partnerships",path:"/Partnerships"},
-          ]    
-        },
+  { name: "Home", path: "/" },
 
-      ]
-     },
-    { name: "Admission", 
-      submenu:[
-        {
-          title:"Admission Information",
-          items:[
-          {name:"Overview",path:"/Overview"},
-          {name:"Calender",path:"/calender"},
-          {name:"Admission", path:"/admission"},
-          {name:"Academic Cases", path:"/academic-cases"},
-          {name:"Tuition Service fees", path:"/tuition-Service-fees"},
-         
+  {
+    name: "About",
+    submenu: [
+      {
+        title: "Who we are",
+        items: [
+          { name: "Lucy at a glance", path: "/LucyAtAGlance" },
+          { name: "Our history", path: "/history" },
+          { name: "Our mission and vision", path: "/VisionMission" },
+          { name: "The shareholders", path: "/shareholders" }
         ]
-        }, 
-      ]
+      },
+      {
+        title: "Leadership and People",
+        items: [
+          { name: "President / Dean", path: "/president" },
+          { name: "Faculty & Staff", path: "/faculty" }
+        ]
+      },
+      {
+        title: "Accreditation & Recognition",
+        items: [
+          { name: "Certifications", path: "/Certifications" },
+          { name: "Government Approval", path: "/government-approval" },
+          { name: "Partnerships", path: "/Partnerships" }
+        ]
+      }
+    ]
+  },
 
-     },
-    { name: "Courses", path: "/courses" },
-    { name: "News and Events", path: "/news" },
-    { name: "Contact Us", path: "/contact" }
-  ];
+  {
+    name: "Admission",
+    submenu: [
+      {
+        title: "Admission Information",
+        items: [
+          { name: "Overview", path: "/Overview" },
+          { name: "Admission", path: "/admission" },
+          { name: "Academic Cases", path: "/academic-cases" },
+          { name: "Tuition Service Fees", path: "/tuition-service-fees" }
+        ]
+      }
+    ]
+  },
+
+  {
+    name: "Academics",
+    submenu: [
+      {
+        title: "Academic Structure",
+        items: [
+          { name: "Departments", path: "/departments" },
+          { name: "Registrar Office", path: "/registrar-office" },
+          { name: "Student Statistics", path: "/student-statistics" },
+          { name: "Facilities", path: "/facilities" }
+        ]
+      },
+      {
+        title: "Academic Life",
+        items: [
+          { name: "Academic Calendar", path: "/calendar" },
+          { name: "Academic Regulations", path: "/academic-regulations" },
+          { name: "Achievements", path: "/achievements" },
+          { name: "Graduation", path: "/graduation" },
+          { name: "Alumni", path: "/alumni" }
+        ]
+      }
+    ]
+  },
+
+  { name: "News and Events", path: "/news" },
+  { name: "Contact Us", path: "/contact" }
+];
 
 export const categories = [
         {
