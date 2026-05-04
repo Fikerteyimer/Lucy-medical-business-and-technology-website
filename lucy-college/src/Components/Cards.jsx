@@ -17,7 +17,7 @@ function Cards({
     <div
       className={twMerge(
         clsx(
-          "flex flex-col shadow-md p-4 text-left md:text-center rounded-xl hover:shadow-lg transition-transform duration-300 hover:scale-100 mt-20",
+          "flex flex-col shadow-md  p-4 text-left md:text-center rounded-xl hover:shadow-lg transition-transform duration-300 hover:scale-100 mt-20",
           bgcolor
         )
       )}

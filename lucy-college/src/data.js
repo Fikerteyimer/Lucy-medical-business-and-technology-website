@@ -559,7 +559,7 @@ export const cases = [
 
 export const whatweOffer = [
   {
-    text: "Practical Training and Internships",
+    text: "Training and Internships",
     description:
       "We provide hands-on learning opportunities through internships and practical training in real-world settings, allowing students to apply their knowledge and gain valuable experience in their chosen fields.",
     Icon: HiAcademicCap,
