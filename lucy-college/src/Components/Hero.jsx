@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <div className="w-full min-h-screen flex flex-col md:flex-row">
+    <div className="w-full min-h-screen flex flex-col md:flex-row mt-5">
 
       <div className="w-full md:w-3/5 flex items-center justify-center px-6 py-16 md:py-0 bg-white">
 

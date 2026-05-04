@@ -3,7 +3,7 @@ import { navLinks } from "../data";
 
 function Footer() {
   return (
-    <footer className="bg-blue-900 text-white w-full pt-16 pb-8 mt-30">
+    <footer className="bg-blue-950 text-white w-full pt-16 pb-8 mt-30">
 
       <div className="max-w-7xl mx-auto px-6 md:px-10">
 

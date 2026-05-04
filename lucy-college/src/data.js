@@ -14,6 +14,8 @@ import { MdModelTraining } from "react-icons/md";
 import { FaChalkboardTeacher } from "react-icons/fa";
 
 
+
+
 import thinking from "./assets/thinking.png";
 import academic from "./assets/academic.png";
 import collaboration from "./assets/collaboration.png";
@@ -553,4 +555,34 @@ export const cases = [
       }
     ]
   }
+];
+
+export const whatweOffer = [
+  {
+    text: "Practical Training and Internships",
+    description:
+      "We provide hands-on learning opportunities through internships and practical training in real-world settings, allowing students to apply their knowledge and gain valuable experience in their chosen fields.",
+    Icon: HiAcademicCap,
+    bgcolor: "bg-white",
+    color: "text-gray-500",
+    Subcolor:"text-black"
+  },
+  {
+    text: "Industry-Relevant Curriculum",
+    description:
+      "Our curriculum is designed in collaboration with industry experts to ensure it meets the latest market demands and equips students with relevant skills and knowledge.",
+    Icon: HiBeaker,
+    bgcolor: "bg-blue-950",
+    color: "text-blue-300",
+    Subcolor:"text-white"
+  },
+  {
+    text: "Experienced Faculty",
+    description:
+      "Our faculty members are experienced professionals and academics who bring real-world insights and expertise into the classroom, enriching the learning experience for our students.",
+    Icon: HiBookOpen,
+    bgcolor: "bg-white",
+    color: "text-gray-500",
+    Subcolor:"text-black"
+  },
 ];

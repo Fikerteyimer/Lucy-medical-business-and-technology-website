@@ -6,7 +6,7 @@ function Paragraph({ children, className }) {
     <p
       className={twMerge(
         clsx(
-          "text-gray-700  text-lg leading-relaxed text-left",
+          "text-gray-700  text-md md:text-lg leading-relaxed text-left",
           className
         )
       )}

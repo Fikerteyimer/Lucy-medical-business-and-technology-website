@@ -7,7 +7,7 @@ function NewLetter() {
       <div className="max-w-6xl mx-auto bg-gradient-to-r from-blue-50 to-white rounded-3xl shadow-lg overflow-hidden grid md:grid-cols-2">
 
        
-        <div className="p-10 md:p-14 flex flex-col justify-center bg-blue-900 text-white">
+        <div className="p-10 md:p-14 flex flex-col justify-center bg-blue-950 text-white">
           
           <p className="text-sm uppercase tracking-widest text-blue-200 mb-4">
             Newsletter
@@ -44,7 +44,7 @@ function NewLetter() {
 
             <Button
               text="Subscribe"
-              className="w-full bg-blue-900 text-white py-4 rounded-xl 
+              className="w-full bg-blue-950 text-white py-4 rounded-xl 
               hover:bg-blue-800 transition font-medium"
             />
 
