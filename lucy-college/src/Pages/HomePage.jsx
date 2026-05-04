@@ -28,12 +28,7 @@ function HomePage() {
             <Paragraph children="At Lucy College, we offer a diverse range of programs designed to empower students with knowledge and practical skills for real-world success" className="text-center"/>
            <CardGrid data={whatweOffer} gap="gap-3"/>
           </div>
-         
-          
-         
-         
-          
-          
+          <AboutSection/>
          <LatestNews/>
          
           

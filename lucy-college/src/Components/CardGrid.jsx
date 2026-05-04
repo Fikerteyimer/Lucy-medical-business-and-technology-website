@@ -4,7 +4,7 @@ import { twMerge } from "tailwind-merge";
 
 function CardsGrid({ data, gap }) {
   return (
-    <div className={twMerge(clsx("grid grid-cols-1 md:grid-cols-3 gap-6 mx-5", gap))}>
+    <div className={twMerge(clsx(" grid grid-cols-1 md:grid-cols-3 gap-6 mx-5", gap ))}>
       {data.map((item, index) => (
         <Cards
           key={index}

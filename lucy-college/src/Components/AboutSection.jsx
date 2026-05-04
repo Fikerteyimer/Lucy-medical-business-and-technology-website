@@ -8,7 +8,7 @@ function AboutSection() {
   const navigate = useNavigate();
 
   return (
-    <section className="flex flex-col md:flex-row items-start md:items-center gap-10 md:gap-16 px-6 md:px-12 py-20 w-full my-15">
+    <section className="flex mt-40 bg-blue-950 flex-col md:flex-row items-start md:items-center gap-10 md:gap-16 px-6 md:px-12 py-20 w-full my-15">
       <div className="w-full md:w-1/2">
         <img
           src={About1}
@@ -21,14 +21,15 @@ function AboutSection() {
         className="w-full md:w-1/2 space-y-6">
         <Heading 
           title="About Lucy"
-          className="text-center md:text-left" />
-        <Paragraph
+          className="text-center md:text-left text-blue-300" />
+        <Paragraph className="text-white"
           children="Our institution is committed to academic excellence, creativity, and practical learning. Students are encouraged to explore new ideas, participate in research, and engage in collaborative projects that prepare them for real-world challenges. With diverse programs, modern facilities, and a vibrant campus life, we strive to create an environment where every student can grow, discover their potential, and build a meaningful future." />
         <div 
           className="flex justify-center md:justify-start">
           <Button 
             text="More About Us"
-            onClick={() => navigate("/LucyAtAGlance")} />
+            onClick={() => navigate("/LucyAtAGlance")}
+            className="py-3 px-10 bg-blue-400" />
         </div>
       </div>
 
