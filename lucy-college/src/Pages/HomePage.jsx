@@ -19,6 +19,7 @@ function HomePage() {
         <div>
           <NavBar /> 
           <Hero />
+           <Counter />
           
           <AboutSection />
            
@@ -33,7 +34,7 @@ function HomePage() {
                   practical training, academic excellence, and student-centered learning
                   to prepare graduates for successful careers and societal contribution."
           />
-          <Counter />
+         
          
           
           <CardGrid

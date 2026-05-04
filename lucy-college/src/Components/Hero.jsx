@@ -6,7 +6,6 @@ const Hero = () => {
   return (
     <div className="w-full min-h-screen flex flex-col md:flex-row">
 
-      {/* LEFT SIDE - TEXT */}
       <div className="w-full md:w-3/5 flex items-center justify-center px-6 py-16 md:py-0 bg-white">
 
         <div className="max-w-xl text-center md:text-left">
@@ -49,7 +48,6 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* RIGHT SIDE - SMALLER IMAGE */}
       <div
         className="w-full md:w-2/5 min-h-[40vh] mt-10 md:min-h-screen bg-cover bg-center"
         style={{
