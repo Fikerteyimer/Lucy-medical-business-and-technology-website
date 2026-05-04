@@ -21,7 +21,7 @@ function Counter() {
       setCounts((prev) =>
         prev.map((count, i) => {
           const target = stats[i].value;
-          const step = Math.ceil(target / 30); // smoother speed
+          const step = Math.ceil(target / 30); // smooth counting
           return count < target ? Math.min(count + step, target) : target;
         })
       );
@@ -42,19 +42,18 @@ function Counter() {
               key={index}
               className="
                 flex flex-col items-center text-center
-                p-3 sm:p-4 md:p-5   /* ✅ reduced padding */
+                p-3 sm:p-4 md:p-5
                 rounded-lg
                 bg-white/5
                 hover:bg-white/10
                 transition-all duration-300
-                hover:-translate-y-1   /* ✅ softer lift */
+                hover:-translate-y-1
                 min-w-0
-                animate-fadeInUp
+
+                opacity-0
+                animate-[fadeIn_0.6s_ease_forwards]
               "
-              style={{
-                animationDelay: `${index * 0.15}s`,
-                animationFillMode: "both",
-              }}
+              style={{ animationDelay: `${index * 0.15}s` }}
             >
 
               {/* ICON */}
@@ -78,26 +77,6 @@ function Counter() {
         })}
 
       </div>
-
-  
-      <style>
-        {`
-          @keyframes fadeInUp {
-            0% {
-              opacity: 0;
-              transform: translateY(20px);
-            }
-            100% {
-              opacity: 1;
-              transform: translateY(0);
-            }
-          }
-
-          .animate-fadeInUp {
-            animation: fadeInUp 0.6s ease forwards;
-          }
-        `}
-      </style>
     </section>
   );
 }
